@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Batteries Plus NSW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#1e40af',
+                        'battery-green': '#059669',
+                        'battery-yellow': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-battery-full text-battery-blue text-3xl mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-900">Batteries Plus NSW</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-battery-blue">Home</a>
+                    <a href="products.html" class="text-battery-blue font-semibold">Products</a>
+                    <a href="#" class="text-gray-700 hover:text-battery-blue">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-battery-blue">About</a>
+                    <a href="#" class="text-gray-700 hover:text-battery-blue">Contact</a>
+                    <a href="tel:0298765432" class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-battery-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-battery-blue to-blue-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold mb-6">Our Battery Products</h1>
+            <p class="text-xl mb-8">Professional-grade batteries for every application across NSW</p>
+            <div class="flex justify-center space-x-4 flex-wrap">
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm">✓ Premium Quality</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm">✓ Extended Warranties</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm">✓ Expert Installation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Battery Finder Tool -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Battery Finder Tool</h2>
+                <p class="text-lg text-gray-600">Find the perfect battery for your vehicle in seconds</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-8 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Vehicle Type</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-battery-blue focus:border-transparent">
+                            <option>Select Vehicle Type</option>
+                            <option>Car</option>
+                            <option>SUV</option>
+                            <option>Truck</option>
+                            <option>Bus</option>
+                            <option>Motorcycle</option>
+                            <option>Marine</option>
+                            <option>Emergency Vehicle</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Make</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-battery-blue focus:border-transparent">
+                            <option>Select Make</option>
+                            <option>Toyota</option>
+                            <option>Holden</option>
+                            <option>Ford</option>
+                            <option>Mazda</option>
+                            <option>Hyundai</option>
+                            <option>Nissan</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Model</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-battery-blue focus:border-transparent">
+                            <option>Select Model</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Year</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-battery-blue focus:border-transparent">
+                            <option>Select Year</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>Older</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Engine Size (Optional)</label>
+                        <input type="text" placeholder="e.g. 2.0L, V6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-battery-blue focus:border-transparent">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="bg-battery-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 font-semibold text-lg">
+                        <i class="fas fa-search mr-2"></i>Find My Battery
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Filter -->
+    <section class="py-8 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn active bg-battery-blue text-white px-6 py-3 rounded-full font-medium" data-filter="all">
+                    All Products
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="automotive">
+                    <i class="fas fa-car mr-2"></i>Automotive
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="commercial">
+                    <i class="fas fa-truck mr-2"></i>Commercial
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="emergency">
+                    <i class="fas fa-ambulance mr-2"></i>Emergency Services
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="marine">
+                    <i class="fas fa-ship mr-2"></i>Marine
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="industrial">
+                    <i class="fas fa-industry mr-2"></i>Industrial
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50" data-filter="motorcycle">
+                    <i class="fas fa-motorcycle mr-2"></i>Motorcycle
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8" id="product-grid">
+                
+                <!-- Automotive Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="automotive">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-battery-blue"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-blue-100 text-battery-blue px-3 py-1 rounded-full text-sm font-medium">Automotive</span>
+                            <span class="text-battery-green font-bold">3 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Car Battery</h3>
+                        <p class="text-gray-600 mb-4">High-performance battery for cars and SUVs</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">550-800A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">45-100Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$150-$350</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="automotive">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-battery-blue"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-blue-100 text-battery-blue px-3 py-1 rounded-full text-sm font-medium">Automotive</span>
+                            <span class="text-battery-green font-bold">5 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Long Life SUV Battery</h3>
+                        <p class="text-gray-600 mb-4">Extended life battery for larger vehicles</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">650-900A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">70-120Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$200-$450</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="commercial">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-battery-blue"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Commercial</span>
+                            <span class="text-battery-green font-bold">4 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Heavy Duty Truck Battery</h3>
+                        <p class="text-gray-600 mb-4">Commercial grade for trucks and buses</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">800-1200A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V/24V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">100-200Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$350-$800</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="commercial">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-battery-blue"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Commercial</span>
+                            <span class="text-battery-green font-bold">3 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bus Fleet Battery</h3>
+                        <p class="text-gray-600 mb-4">Reliable power for public transport</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">900-1500A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">24V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">150-300Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$500-$1200</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Services Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="emergency">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-red-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">Emergency</span>
+                            <span class="text-battery-green font-bold">5 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ambulance Battery</h3>
+                        <p class="text-gray-600 mb-4">Critical power for emergency vehicles</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">700-1000A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">80-150Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$300-$600</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="emergency">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-red-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">Emergency</span>
+                            <span class="text-battery-green font-bold">4 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fire Truck Battery</h3>
+                        <p class="text-gray-600 mb-4">Heavy-duty power for fire service</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">1000-1500A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V/24V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">120-250Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$450-$900</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marine Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="marine">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Marine</span>
+                            <span class="text-battery-green font-bold">3 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Deep Cycle Marine Battery</h3>
+                        <p class="text-gray-600 mb-4">Waterproof battery for boats and yachts</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">500-750A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">75-200Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$250-$500</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industrial Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="industrial">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-full text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-medium">Industrial</span>
+                            <span class="text-battery-green font-bold">6 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Forklift Battery</h3>
+                        <p class="text-gray-600 mb-4">Heavy-duty industrial application</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">800-1200A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V/24V/48V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">200-500Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$400-$1500</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motorcycle Batteries -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="motorcycle">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-battery-half text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Motorcycle</span>
+                            <span class="text-battery-green font-bold">2 Year Warranty</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Motorcycle Battery</h3>
+                        <p class="text-gray-600 mb-4">Compact power for bikes and scooters</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">CCA:</span>
+                                <span class="text-sm font-medium">120-300A</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Voltage:</span>
+                                <span class="text-sm font-medium">12V</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-gray-500">Capacity:</span>
+                                <span class="text-sm font-medium">4-20Ah</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-battery-blue">$50-$200</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Battery Brands Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Premium Battery Brands</h2>
+                <p class="text-lg text-gray-600">We stock only the most trusted battery brands in the industry</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-battery-full text-2xl text-battery-blue"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Century Batteries</h3>
+                    <p class="text-sm text-gray-600">Australia's leading battery manufacturer</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-2xl text-battery-yellow"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Optima Batteries</h3>
+                    <p class="text-sm text-gray-600">High-performance spiral cell technology</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-battery-three-quarters text-2xl text-battery-green"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Bosch Batteries</h3>
+                    <p class="text-sm text-gray-600">German engineering and reliability</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car-battery text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Exide Batteries</h3>
+                    <p class="text-sm text-gray-600">Trusted by professionals worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recycling Program -->
+    <section class="py-16 bg-battery-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <i class="fas fa-recycle text-5xl mb-4"></i>
+                <h2 class="text-3xl font-bold mb-4">Battery Recycling Program</h2>
+                <p class="text-xl">We're committed to environmental responsibility and sustainable practices</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Eco-Friendly Disposal</h3>
+                    <p>We safely recycle 100% of old batteries through certified recycling facilities</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exchange-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Trade-In Credit</h3>
+                    <p>Receive up to $20 credit when you trade in your old battery for a new one</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Free Collection</h3>
+                    <p>We'll collect your old batteries during installation - no extra charge</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white text-battery-green px-8 py-3 rounded-lg hover:bg-gray-100 font-semibold text-lg">
+                    <i class="fas fa-info-circle mr-2"></i>Learn More About Recycling
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-battery-blue to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Need Help Choosing the Right Battery?</h2>
+            <p class="text-xl mb-8">Our experts are here to help you find the perfect battery for your needs</p>
+            <div class="flex justify-center space-x-4 flex-wrap">
+                <a href="tel:0298765432" class="bg-white text-battery-blue px-8 py-3 rounded-lg hover:bg-gray-100 font-semibold text-lg">
+                    <i class="fas fa-phone mr-2"></i>Call for Quote
+                </a>
+                <button class="bg-battery-green text-white px-8 py-3 rounded-lg hover:bg-green-700 font-semibold text-lg">
+                    <i class="fas fa-envelope mr-2"></i>Request Callback
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-battery-full text-battery-blue text-2xl mr-2"></i>
+                        <h3 class="text-xl font-bold">Batteries Plus NSW</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted partner for all battery needs across New South Wales.</p>
+                    <div class="flex space-x-4">
+                        <i class="fab fa-facebook text-battery-blue hover:text-blue-400 cursor-pointer"></i>
+                        <i class="fab fa-instagram text-battery-blue hover:text-blue-400 cursor-pointer"></i>
+                        <i class="fab fa-linkedin text-battery-blue hover:text-blue-400 cursor-pointer"></i>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Automotive Batteries</a></li>
+                        <li><a href="#" class="hover:text-white">Commercial Batteries</a></li>
+                        <li><a href="#" class="hover:text-white">Emergency Batteries</a></li>
+                        <li><a href="#" class="hover:text-white">Marine Batteries</a></li>
+                        <li><a href="#" class="hover:text-white">Industrial Batteries</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Battery Installation</a></li>
+                        <li><a href="#" class="hover:text-white">Battery Testing</a></li>
+                        <li><a href="#" class="hover:text-white">Fleet Services</a></li>
+                        <li><a href="#" class="hover:text-white">Recycling Program</a></li>
+                        <li><a href="#" class="hover:text-white">Warranties</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>(02) 9876 5432</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@batteriesplus.nsw</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Battery Street, Sydney NSW</li>
+                        <li><i class="fas fa-clock mr-2"></i>Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Batteries Plus NSW. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Filter Functionality -->
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-battery-blue', 'text-white');
+                    b.classList.add('bg-white', 'text-gray-700');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-battery-blue', 'text-white');
+                btn.classList.remove('bg-white', 'text-gray-700');
+
+                // Get filter value
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Show/hide products
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Battery Finder Tool functionality
+        const vehicleTypeSelect = document.querySelector('select');
+        const makeSelect = document.querySelectorAll('select')[1];
+        const modelSelect = document.querySelectorAll('select')[2];
+        
+        // Popular Australian car makes and models
+        const vehicleData = {
+            'Car': {
+                'Toyota': ['Camry', 'Corolla', 'RAV4', 'Prado', 'Hilux'],
+                'Holden': ['Commodore', 'Cruze', 'Astra', 'Captiva'],
+                'Ford': ['Falcon', 'Focus', 'Fiesta', 'Territory', 'Ranger'],
+                'Mazda': ['Mazda3', 'CX-5', 'Mazda6', 'CX-3', 'BT-50'],
+                'Hyundai': ['i30', 'Tucson', 'Elantra', 'Santa Fe', 'Accent'],
+                'Nissan': ['X-Trail', 'Navara', 'Micra', 'Qashqai', 'Altima']
+            },
+            'SUV': {
+                'Toyota': ['RAV4', 'Prado', 'Kluger', 'Fortuner'],
+                'Mazda': ['CX-5', 'CX-9', 'CX-3'],
+                'Hyundai': ['Tucson', 'Santa Fe', 'Kona'],
+                'Nissan': ['X-Trail', 'Pathfinder', 'Juke']
+            },
+            'Truck': {
+                'Toyota': ['Hilux', 'HiAce'],
+                'Ford': ['Ranger', 'Transit'],
+                'Mitsubishi': ['Triton', 'Canter'],
+                'Isuzu': ['D-Max', 'NPR']
+            }
+        };
+
+        if (vehicleTypeSelect && makeSelect && modelSelect) {
+            vehicleTypeSelect.addEventListener('change', (e) => {
+                const vehicleType = e.target.value;
+                makeSelect.innerHTML = '<option>Select Make</option>';
+                modelSelect.innerHTML = '<option>Select Model</option>';
+                
+                if (vehicleData[vehicleType]) {
+                    Object.keys(vehicleData[vehicleType]).forEach(make => {
+                        const option = document.createElement('option');
+                        option.value = make;
+                        option.textContent = make;
+                        makeSelect.appendChild(option);
+                    });
+                }
+            });
+
+            makeSelect.addEventListener('change', (e) => {
+                const vehicleType = vehicleTypeSelect.value;
+                const make = e.target.value;
+                modelSelect.innerHTML = '<option>Select Model</option>';
+                
+                if (vehicleData[vehicleType] && vehicleData[vehicleType][make]) {
+                    vehicleData[vehicleType][make].forEach(model => {
+                        const option = document.createElement('option');
+                        option.value = model;
+                        option.textContent = model;
+                        modelSelect.appendChild(option);
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

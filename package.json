@@ -1,0 +1,51 @@
+{
+  "name": "batteries-plus-nsw",
+  "version": "1.0.0",
+  "description": "Professional website for Batteries Plus NSW - Car, Truck, and Emergency Vehicle Battery Services",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run optimize:images && vite build",
+    "build:prod": "npm run optimize:images && npm run test:accessibility && vite build",
+    "preview": "vite preview",
+    "serve": "npx http-server . -p 8080",
+    "test": "npm run test:lighthouse && npm run test:accessibility",
+    "test:lighthouse": "node scripts/lighthouse-test.js",
+    "test:accessibility": "playwright test accessibility.spec.js",
+    "test:performance": "node scripts/performance-monitor.js",
+    "optimize:images": "node scripts/image-optimizer.js",
+    "validate:photos": "node scripts/photo-validator.js",
+    "backup:photos": "node scripts/photo-backup.js",
+    "deploy": "npm run build:prod && node scripts/deploy.js",
+    "monitor": "node scripts/monitoring.js",
+    "ci:setup": "node scripts/ci-setup.js"
+  },
+  "keywords": [
+    "batteries",
+    "automotive",
+    "emergency services",
+    "NSW",
+    "battery replacement"
+  ],
+  "author": "Batteries Plus NSW",
+  "license": "ISC",
+  "devDependencies": {
+    "claude-flow": "^2.0.0-alpha.104",
+    "http-server": "^14.1.1",
+    "vite": "^5.4.20",
+    "@types/node": "^20.0.0",
+    "sharp": "^0.33.0",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^8.0.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "lighthouse": "^11.0.0",
+    "axe-core": "^4.8.0",
+    "playwright": "^1.40.0",
+    "@playwright/test": "^1.40.0",
+    "web-vitals": "^3.5.0",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.2.0"
+  }
+}

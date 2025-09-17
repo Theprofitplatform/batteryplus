@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Battery Services | Batteries Plus NSW</title>
+    <meta name="description" content="Comprehensive battery services in NSW: Testing, mobile installation, fleet management, emergency roadside assistance, maintenance programs & warranty support.">
+    <meta name="keywords" content="battery testing NSW, mobile battery service, fleet battery management, emergency roadside assistance, battery maintenance, battery warranty">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#002375',
+                        'battery-yellow': '#FFC107',
+                        'battery-red': '#22C55E',
+                        'battery-gray': '#475569',
+                        'battery-light': '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'classic': ['Georgia', 'Times New Roman', 'serif'],
+                        'sans': ['Arial', 'Helvetica', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white border-b-3 border-battery-blue sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-8 py-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="photos/batteries_plus_logo_website.jpg"
+                         alt="Batteries Plus Logo"
+                         class="h-16 w-auto object-contain">
+                </div>
+
+                <!-- Navigation & Contact -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <nav class="flex space-x-8">
+                        <a href="index.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">Home</a>
+                        <a href="services.html" class="text-lg text-battery-blue font-semibold border-b-3 border-battery-blue transition-all duration-300 pb-1">Services</a>
+                        <a href="about.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">About</a>
+                        <a href="contact.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">Contact</a>
+                    </nav>
+                    <div class="flex items-center space-x-3 bg-battery-light px-6 py-3 rounded-xl border-2 border-gray-200 shadow-sm">
+                        <i class="fas fa-phone text-battery-blue text-lg"></i>
+                        <span class="font-bold text-battery-blue text-lg">0439 222 665</span>
+                    </div>
+                    <button class="bg-battery-yellow text-black px-8 py-4 rounded-xl border-3 border-battery-yellow font-bold text-lg hover:bg-white hover:text-battery-yellow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Free Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button class="text-battery-gray hover:text-battery-blue p-3 rounded-lg hover:bg-battery-light transition-all duration-200">
+                        <i class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-battery-blue text-white py-32">
+        <div class="container mx-auto px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-5xl mx-auto">
+                    <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
+                        Professional Battery
+                        <span class="text-battery-yellow block mt-2">Services</span>
+                    </h2>
+                    <p class="text-2xl text-blue-100 leading-relaxed mb-12">
+                        Comprehensive battery solutions across NSW - From testing and installation to fleet management and emergency assistance. Expert service you can trust.
+                    </p>
+
+                    <!-- Hero CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                        <button onclick="scrollToBooking()" class="bg-battery-yellow text-black px-10 py-5 text-xl font-bold rounded-xl border-3 border-battery-yellow hover:bg-white hover:text-battery-yellow hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-calculator mr-3"></i>Get Free Quote
+                        </button>
+                        <a href="tel:0439222665" class="bg-battery-red text-white px-10 py-5 text-xl font-bold rounded-xl border-3 border-battery-red hover:bg-white hover:text-battery-red hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-phone mr-3"></i>Emergency Service
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-clock text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">24/7 Service</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-shield-alt text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">Licensed & Insured</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-award text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">15+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-32 bg-battery-light">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-battery-blue mb-8">Our Complete Service Range</h3>
+                <div class="w-32 h-2 bg-battery-yellow mx-auto mb-8 rounded-full"></div>
+                <p class="text-2xl text-battery-gray max-w-4xl mx-auto leading-relaxed">
+                    From basic testing to comprehensive fleet management, we provide all the battery services you need with expert installation and reliable support across NSW.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Battery Testing & Diagnostics -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/high_performance_battery_system.jpg"
+                             alt="Battery testing and diagnostic service"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-green-500 p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-stethoscope text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Battery Testing & Diagnostics</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        Professional battery health assessment using advanced diagnostic equipment to determine battery condition and performance.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Comprehensive load testing</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>FREE Testing Available</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Detailed diagnostic report</li>
+                    </ul>
+                    <button class="w-full bg-battery-blue text-white py-4 rounded-xl border-3 border-battery-blue font-bold text-lg hover:bg-white hover:text-battery-blue hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Mobile Installation Service -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/dual_varta_battery_setup_rv.jpg"
+                             alt="Mobile battery installation service"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-battery-blue p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-truck text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Mobile Installation Service</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        We come to you! Professional battery installation at your location across metro and regional NSW.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Home or office installation</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Same-day availability</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>All NSW coverage</li>
+                    </ul>
+                    <button class="w-full bg-battery-blue text-white py-4 rounded-xl border-3 border-battery-blue font-bold text-lg hover:bg-white hover:text-battery-blue hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Fleet Management -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/ambulance_bus_garage_maintenance.jpg"
+                             alt="Fleet management battery solutions"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-purple-600 p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Fleet Management Solutions</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        Comprehensive battery management programs designed for commercial fleets and business vehicles.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Volume discounts available</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Fleet-wide tracking</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Performance reporting</li>
+                    </ul>
+                    <button class="w-full bg-battery-blue text-white py-4 rounded-xl border-3 border-battery-blue font-bold text-lg hover:bg-white hover:text-battery-blue hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Emergency Roadside Assistance -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-red hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/emergency_vehicle_engine_repair.jpg"
+                             alt="Emergency roadside battery assistance"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-battery-red p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-ambulance text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-red mb-6">Emergency Roadside Assistance</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        24/7 emergency battery replacement and jump-start services across NSW when you need it most.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>24/7 availability</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>30-min response metro</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Emergency priority</li>
+                    </ul>
+                    <button class="w-full bg-battery-red text-white py-4 rounded-xl border-3 border-battery-red font-bold text-lg hover:bg-white hover:text-battery-red hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Battery Maintenance Programs -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/vehicle_battery_compartment_optima_blue.jpg"
+                             alt="Battery maintenance and service programs"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-orange-500 p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-calendar-check text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Battery Maintenance Programs</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        Scheduled maintenance services to extend battery life and prevent unexpected failures.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Regular health checks</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Flexible scheduling</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Preventive alerts</li>
+                    </ul>
+                    <button class="w-full bg-battery-blue text-white py-4 rounded-xl border-3 border-battery-blue font-bold text-lg hover:bg-white hover:text-battery-blue hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Warranty & Insurance -->
+                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+                    <div class="relative mb-8">
+                        <img src="photos/luxury_automotive_service_bay.jpg"
+                             alt="Warranty and insurance battery claims"
+                             class="w-full h-48 object-cover rounded-xl border-2 border-gray-200"
+                             loading="lazy">
+                        <div class="absolute top-3 right-3 bg-blue-600 p-3 rounded-xl shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Warranty & Insurance Claims</h4>
+                    <p class="text-battery-gray mb-8 leading-relaxed text-lg">
+                        Expert assistance with battery warranty claims and insurance paperwork for hassle-free coverage.
+                    </p>
+                    <ul class="text-left text-battery-gray space-y-4 mb-8">
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>No-hassle claims process</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Insurance documentation</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Follow-up support</li>
+                    </ul>
+                    <button class="w-full bg-battery-blue text-white py-4 rounded-xl border-3 border-battery-blue font-bold text-lg hover:bg-white hover:text-battery-blue hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-battery-blue mb-6">Why Choose Batteries Plus NSW?</h3>
+                <div class="w-32 h-2 bg-battery-yellow mx-auto mb-6 rounded-full"></div>
+                <p class="text-2xl text-battery-gray max-w-3xl mx-auto">
+                    Over 15 years of powering NSW with reliable battery solutions and expert service
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Expert Technicians -->
+                <div class="text-center group">
+                    <div class="bg-battery-yellow rounded-3xl w-32 h-32 flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-user-cog text-5xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Expert Technicians</h4>
+                    <p class="text-battery-gray text-lg leading-relaxed">
+                        Our certified technicians have decades of combined experience and stay updated with the latest battery technology and service techniques.
+                    </p>
+                </div>
+
+                <!-- Fast Response -->
+                <div class="text-center group">
+                    <div class="bg-battery-yellow rounded-3xl w-32 h-32 flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-bolt text-5xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Fast Response</h4>
+                    <p class="text-battery-gray text-lg leading-relaxed">
+                        Emergency service within 30 minutes in metro areas. Same-day service available across NSW for all battery needs.
+                    </p>
+                </div>
+
+                <!-- Quality Guarantee -->
+                <div class="text-center group">
+                    <div class="bg-battery-yellow rounded-3xl w-32 h-32 flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-medal text-5xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Quality Guarantee</h4>
+                    <p class="text-battery-gray text-lg leading-relaxed">
+                        All services come with our satisfaction guarantee. Professional installation and no questions asked warranty support.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Row with Background Image -->
+            <div class="relative mt-20 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 opacity-15">
+                    <img src="photos/high_end_vehicle_maintenance.jpg"
+                         alt="High-end vehicle maintenance facility"
+                         class="w-full h-full object-cover"
+                         loading="lazy">
+                </div>
+                <div class="relative bg-battery-blue bg-opacity-95 grid grid-cols-2 md:grid-cols-4 gap-8 py-16 text-center">
+                    <div class="group">
+                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">15,000+</div>
+                        <div class="text-white font-semibold text-lg">Services Completed</div>
+                    </div>
+                    <div class="group">
+                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">98%</div>
+                        <div class="text-white font-semibold text-lg">Customer Satisfaction</div>
+                    </div>
+                    <div class="group">
+                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                        <div class="text-white font-semibold text-lg">Emergency Service</div>
+                    </div>
+                    <div class="group">
+                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
+                        <div class="text-white font-semibold text-lg">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-32 bg-battery-light">
+        <div class="container mx-auto px-8">
+            <div class="max-w-5xl mx-auto">
+                <!-- Service Areas -->
+                <div>
+                    <h3 class="text-5xl font-bold text-battery-blue mb-8 text-center">Service Coverage Areas</h3>
+                    <div class="w-32 h-2 bg-battery-yellow mx-auto mb-8 rounded-full"></div>
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="mb-6">
+                            <h4 class="text-xl font-bold text-battery-blue mb-4">
+                                <i class="fas fa-city mr-2"></i>Metro Areas (30-minute response)
+                            </h4>
+                            <div class="grid grid-cols-2 gap-4 text-gray-700">
+                                <ul class="space-y-2">
+                                    <li>• Sydney CBD</li>
+                                    <li>• North Shore</li>
+                                    <li>• Eastern Suburbs</li>
+                                    <li>• Inner West</li>
+                                    <li>• South West</li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li>• Western Sydney</li>
+                                    <li>• Northern Beaches</li>
+                                    <li>• Sutherland Shire</li>
+                                    <li>• Parramatta</li>
+                                    <li>• Penrith</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-xl font-bold text-green-600 mb-4">
+                                <i class="fas fa-map mr-2"></i>Regional NSW (Same-day service)
+                            </h4>
+                            <div class="grid grid-cols-2 gap-4 text-gray-700">
+                                <ul class="space-y-2">
+                                    <li>• Newcastle</li>
+                                    <li>• Wollongong</li>
+                                    <li>• Central Coast</li>
+                                    <li>• Blue Mountains</li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li>• Hunter Valley</li>
+                                    <li>• South Coast</li>
+                                    <li>• Western NSW</li>
+                                    <li>• North Coast</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-battery-yellow bg-opacity-20 p-4 rounded-lg">
+                            <p class="text-gray-800 font-semibold">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Don't see your area? Call us! We service all of NSW and can arrange special coverage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Booking Form -->
+    <section id="booking" class="py-32 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-20">
+                    <h3 class="text-5xl font-bold text-battery-blue mb-8">Book Your Service</h3>
+                    <div class="w-32 h-2 bg-battery-yellow mx-auto mb-8 rounded-full"></div>
+                    <p class="text-2xl text-battery-gray max-w-3xl mx-auto leading-relaxed">
+                        Schedule your battery service online or call us for immediate assistance
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-r from-battery-blue to-blue-800 rounded-2xl p-8 text-white">
+                    <form class="space-y-6">
+                        <!-- Personal Information -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-blue-200 mb-2">Full Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                            <div>
+                                <label class="block text-blue-200 mb-2">Phone Number *</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-blue-200 mb-2">Email Address *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                            <div>
+                                <label class="block text-blue-200 mb-2">Preferred Service Date</label>
+                                <input type="date" class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                        </div>
+
+                        <!-- Service Information -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-blue-200 mb-2">Service Type *</label>
+                                <select required class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                                    <option value="">Select a service</option>
+                                    <option value="testing">Battery Testing & Diagnostics</option>
+                                    <option value="installation">Mobile Installation</option>
+                                    <option value="emergency">Emergency Roadside Assistance</option>
+                                    <option value="maintenance">Battery Maintenance</option>
+                                    <option value="fleet">Fleet Management</option>
+                                    <option value="warranty">Warranty/Insurance Claim</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-blue-200 mb-2">Vehicle Type</label>
+                                <select class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                                    <option value="">Select vehicle type</option>
+                                    <option value="car">Car/SUV</option>
+                                    <option value="truck">Truck/Commercial</option>
+                                    <option value="marine">Marine/Boat</option>
+                                    <option value="emergency">Emergency Vehicle</option>
+                                    <option value="motorcycle">Motorcycle</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-blue-200 mb-2">Vehicle Make & Model</label>
+                                <input type="text" placeholder="e.g., Toyota Camry 2020" class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                            <div>
+                                <label class="block text-blue-200 mb-2">Service Location</label>
+                                <input type="text" placeholder="Suburb or address" class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow">
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div>
+                            <label class="block text-blue-200 mb-2">Additional Details</label>
+                            <textarea rows="3" placeholder="Any specific requirements or issues you'd like us to know about..." class="w-full px-4 py-3 rounded-lg text-gray-800 border-0 focus:ring-2 focus:ring-battery-yellow"></textarea>
+                        </div>
+
+                        <!-- Emergency Priority -->
+                        <div class="bg-red-600 bg-opacity-20 p-4 rounded-lg">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-3 w-5 h-5 text-battery-red">
+                                <span class="text-white">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    This is an emergency (priority service required)
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                            <button type="submit" class="flex-1 bg-battery-yellow text-gray-900 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition duration-300">
+                                <i class="fas fa-calendar-check mr-2"></i>Book Service
+                            </button>
+                            <a href="tel:0439222665" class="flex-1 bg-battery-red text-white py-4 rounded-lg text-lg font-bold hover:bg-red-700 transition duration-300 text-center">
+                                <i class="fas fa-phone mr-2"></i>Call Now
+                            </a>
+                        </div>
+                    </form>
+
+                    <div class="mt-6 text-center text-blue-200">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        Your information is secure and will only be used to provide your requested service
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-32 bg-battery-light">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-battery-blue mb-8">What Our Customers Say</h3>
+                <div class="w-32 h-2 bg-battery-yellow mx-auto mb-8 rounded-full"></div>
+                <p class="text-2xl text-battery-gray max-w-4xl mx-auto leading-relaxed">
+                    Real experiences from satisfied customers across NSW who trust our professional battery services
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-battery-yellow text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-battery-gray">2 years ago</span>
+                    </div>
+                    <h4 class="font-bold text-battery-blue text-xl mb-3">Mike Thompson</h4>
+                    <p class="text-battery-gray leading-relaxed">
+                        "Outstanding emergency service! My truck battery died at 2 AM on the highway, and they had me back on the road within an hour. Professional, fast, and fairly priced."
+                    </p>
+                    <div class="mt-4 text-sm text-battery-gray">
+                        <i class="fab fa-google text-battery-blue"></i> Commercial Driver • Sydney
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-battery-yellow text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-battery-gray">1 year ago</span>
+                    </div>
+                    <h4 class="font-bold text-battery-blue text-xl mb-3">Sarah Chen</h4>
+                    <p class="text-battery-gray leading-relaxed">
+                        "We've been using Batteries Plus NSW for our entire fleet of 25 vehicles for 3 years. Their maintenance program has reduced our battery-related breakdowns by 80%. Highly recommended!"
+                    </p>
+                    <div class="mt-4 text-sm text-battery-gray">
+                        <i class="fab fa-google text-battery-blue"></i> Fleet Manager • Newcastle
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-battery-yellow text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-battery-gray">1 year ago</span>
+                    </div>
+                    <h4 class="font-bold text-battery-blue text-xl mb-3">James Wilson</h4>
+                    <p class="text-battery-gray leading-relaxed">
+                        "The mobile service is fantastic! They came to my office, tested my car battery, and installed a new one while I continued working. No disruption to my day whatsoever."
+                    </p>
+                    <div class="mt-4 text-sm text-battery-gray">
+                        <i class="fab fa-google text-battery-blue"></i> Business Owner • Parramatta
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">5/5</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "As a paramedic, reliable batteries are crucial. Their emergency vehicle service is impeccable - they understand the importance of our equipment and provide priority support 24/7."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-battery-red rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            L
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">Lisa Rodriguez</p>
+                            <p class="text-gray-600">Paramedic, Wollongong</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">5/5</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Great experience with their marine battery service. They delivered and installed a new deep-cycle battery at the marina. The technician was knowledgeable about marine applications."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            R
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">Robert Kim</p>
+                            <p class="text-gray-600">Boat Owner, Central Coast</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">5/5</span>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Their warranty claim service was exceptional. When my battery failed after 18 months, they handled everything with the manufacturer and replaced it at no cost. Stress-free process!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">Amanda Foster</p>
+                            <p class="text-gray-600">Teacher, Blue Mountains</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Stats Card -->
+            <div class="mt-16">
+                <div class="bg-battery-blue text-white rounded-2xl p-8 flex flex-col justify-center items-center max-w-md mx-auto">
+                    <div class="text-6xl font-bold mb-2">4.8</div>
+                    <div class="flex text-battery-yellow text-2xl mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl mb-2">Average Rating</p>
+                    <p class="text-blue-100">Based on 1,200+ Reviews</p>
+                    <div class="mt-6">
+                        <a href="#" class="bg-battery-yellow text-battery-blue px-6 py-3 rounded-lg font-bold hover:bg-white transition-all duration-300 inline-block">
+                            View All Reviews
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Service CTA -->
+    <section class="relative py-24 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="photos/emergency_vehicle_engine_repair.jpg"
+                 alt="Emergency vehicle battery service"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-battery-red via-green-700 to-battery-red opacity-90"></div>
+        </div>
+
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="max-w-5xl mx-auto bg-black bg-opacity-30 backdrop-blur-sm rounded-3xl p-16 text-center shadow-2xl border-2 border-white border-opacity-20">
+                <h3 class="text-5xl font-bold mb-8 text-white">
+                    <i class="fas fa-exclamation-triangle mr-4 text-6xl text-battery-yellow"></i>
+                    Emergency Battery Service
+                </h3>
+                <p class="text-2xl mb-12 leading-relaxed text-gray-100">
+                    Dead battery? Don't get stranded! Our emergency response team is ready 24/7 across NSW.
+                    Fast, professional service when you need it most.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                    <a href="tel:0439222665" class="bg-white text-battery-red px-12 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-3 text-2xl"></i>Call Now: 0439 222 665
+                    </a>
+                    <button onclick="scrollToBooking()" class="bg-battery-yellow text-gray-900 px-12 py-5 rounded-2xl text-xl font-bold hover:bg-yellow-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-map-marker-alt mr-3 text-2xl"></i>Find Nearest Location
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="max-w-5xl mx-auto bg-gradient-to-br from-battery-blue via-blue-800 to-battery-blue rounded-3xl p-16 text-white text-center shadow-2xl border-4 border-blue-700">
+                <h3 class="text-5xl font-bold mb-8">Get Your Free Service Quote Today</h3>
+                <p class="text-2xl mb-12 leading-relaxed text-blue-100">
+                    Quick online quote in under 2 minutes. Compare services and find the perfect solution for your needs.
+                </p>
+
+                <form class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
+                    <input type="text" placeholder="Your Name" class="px-6 py-4 rounded-xl text-gray-800 text-lg font-medium border-3 border-gray-200 focus:border-battery-yellow focus:outline-none transition-all duration-300">
+                    <input type="tel" placeholder="Phone Number" class="px-6 py-4 rounded-xl text-gray-800 text-lg font-medium border-3 border-gray-200 focus:border-battery-yellow focus:outline-none transition-all duration-300">
+                    <input type="text" placeholder="Vehicle Make & Model" class="px-6 py-4 rounded-xl text-gray-800 text-lg font-medium border-3 border-gray-200 focus:border-battery-yellow focus:outline-none transition-all duration-300">
+                    <select class="px-6 py-4 rounded-xl text-gray-800 text-lg font-medium border-3 border-gray-200 focus:border-battery-yellow focus:outline-none transition-all duration-300">
+                        <option value="">Select Service Type</option>
+                        <option value="testing">Battery Testing</option>
+                        <option value="installation">Mobile Installation</option>
+                        <option value="emergency">Emergency Service</option>
+                        <option value="fleet">Fleet Management</option>
+                    </select>
+                </form>
+
+                <button class="bg-battery-yellow text-gray-900 px-16 py-5 rounded-2xl text-2xl font-bold hover:bg-yellow-300 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-3 border-battery-yellow">
+                    <i class="fas fa-paper-plane mr-3"></i>Get My Quote
+                </button>
+
+                <p class="text-blue-200 mt-6 text-lg">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    Your information is secure and will never be shared
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-24">
+        <div class="container mx-auto px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div class="mb-8 bg-white p-3 rounded-lg inline-block">
+                        <img src="photos/batteries_plus_logo_website.jpg"
+                             alt="Batteries Plus Logo"
+                             class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="text-gray-300 mb-8 leading-relaxed text-lg">
+                        NSW's most trusted battery specialists, providing professional battery services and replacement for over 15 years.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transform hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-facebook text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transform hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transform hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-linkedin text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-2xl font-bold mb-8 text-battery-yellow">Quick Links</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Car Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Truck Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Marine Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Emergency Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h5 class="text-2xl font-bold mb-8 text-battery-yellow">Services</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Battery Testing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Installation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Mobile Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Fleet Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 text-lg">Recycling</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="text-2xl font-bold mb-8 text-battery-yellow">Contact Us</h5>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
+                            <i class="fas fa-phone text-battery-yellow text-xl"></i>
+                            <span class="text-lg">0439 222 665</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
+                            <i class="fas fa-envelope text-battery-yellow text-xl"></i>
+                            <span class="text-lg">info@batteriesplusnsw.com.au</span>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
+                            <i class="fas fa-map-marker-alt text-battery-yellow text-xl mt-1"></i>
+                            <span class="text-lg">Multiple locations across NSW<br>Mobile service available</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
+                            <i class="fas fa-clock text-battery-yellow text-xl"></i>
+                            <span class="text-lg">24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t-2 border-gray-600 mt-16 pt-12 text-center bg-gray-700 rounded-2xl p-8 mx-4">
+                <p class="text-gray-300 text-lg">
+                    &copy; 2024 Batteries Plus NSW. All rights reserved. |
+                    <a href="#" class="hover:text-battery-yellow transition-all duration-300 font-semibold">Privacy Policy</a> |
+                    <a href="#" class="hover:text-battery-yellow transition-all duration-300 font-semibold">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to booking section
+        function scrollToBooking() {
+            document.getElementById('booking').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            // Handle form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(form);
+                const serviceType = form.querySelector('select[required]').value;
+                const isEmergency = form.querySelector('input[type="checkbox"]').checked;
+                
+                // Show confirmation
+                if (isEmergency) {
+                    alert('Emergency service request received! We will call you within 5 minutes. For immediate assistance, please call 0439 222 665.');
+                } else {
+                    alert('Service booking request submitted successfully! We will contact you within 2 hours to confirm your appointment.');
+                }
+                
+                // Reset form
+                form.reset();
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.group, .bg-white').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        /* Custom focus styles for form elements */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+        }
+        
+        /* Smooth hover transitions */
+        .group:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</body>
+</html>

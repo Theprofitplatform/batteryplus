@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Batteries Plus NSW - NSW's Trusted Battery Specialists Since 2010</title>
+    <meta name="description" content="Learn about Batteries Plus NSW - established in 2010, serving NSW with professional battery services. Our mission, values, expert team, and commitment to excellence.">
+    <meta name="keywords" content="about Batteries Plus NSW, battery company history, NSW battery specialists, professional battery services, company values">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#002375',
+                        'battery-yellow': '#FFC107',
+                        'battery-red': '#22C55E',
+                        'battery-gray': '#475569',
+                        'battery-light': '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'classic': ['Georgia', 'Times New Roman', 'serif'],
+                        'sans': ['Arial', 'Helvetica', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white border-b-3 border-battery-blue sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-8 py-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="photos/batteries_plus_logo_website.jpg"
+                         alt="Batteries Plus Logo"
+                         class="h-16 w-auto object-contain">
+                </div>
+                
+                <!-- Navigation -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <nav class="flex space-x-8">
+                        <a href="index.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">Home</a>
+                        <a href="services.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">Services</a>
+                        <a href="about.html" class="text-lg text-battery-blue font-semibold border-b-3 border-battery-blue pb-1">About</a>
+                        <a href="contact.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold border-b-3 border-transparent hover:border-battery-blue transition-all duration-300 pb-1">Contact</a>
+                    </nav>
+                    <div class="flex items-center space-x-3 bg-battery-light px-6 py-3 rounded-xl border-2 border-gray-200 shadow-sm">
+                        <i class="fas fa-phone text-battery-blue text-lg"></i>
+                        <span class="font-bold text-battery-blue text-lg">0439 222 665</span>
+                    </div>
+                    <button class="bg-battery-yellow text-black px-8 py-4 rounded-xl border-3 border-battery-yellow font-bold text-lg hover:bg-white hover:text-battery-yellow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Free Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button class="text-battery-gray hover:text-battery-blue p-3 rounded-lg hover:bg-battery-light transition-all duration-200">
+                        <i class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="bg-battery-blue text-white py-32">
+        <div class="container mx-auto px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-5xl mx-auto">
+                    <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-8">
+                        About
+                        <span class="text-battery-yellow block mt-2">Batteries Plus NSW</span>
+                    </h2>
+                    <p class="text-2xl text-blue-100 leading-relaxed mb-12">
+                        Powering NSW since 2010 with reliability, expertise, and exceptional service under the trusted leadership of Nilesh Rohan.
+                    </p>
+
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-calendar-alt text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">Established 2010</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-users text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">15,000+ Customers</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
+                            <i class="fas fa-map-marked-alt text-2xl text-battery-yellow"></i>
+                            <span class="font-semibold text-lg">All NSW Covered</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History & Founding Story -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-4xl font-bold text-battery-blue mb-6">Our Story</h3>
+                        <div class="prose text-battery-gray text-lg space-y-6">
+                            <p>
+                                Founded in 2010 by automotive expert Nilesh Rohan, Batteries Plus NSW
+                                began as a small workshop in Parramatta with a simple mission: to provide NSW with the most
+                                reliable battery services available.
+                            </p>
+                            <p>
+                                What started as Nilesh's one-man operation serving local car owners has grown into NSW's most
+                                trusted battery specialist, with a team of certified technicians serving thousands of
+                                customers across the state. Our founding principle remains unchanged: every customer
+                                deserves power they can depend on.
+                            </p>
+                            <p>
+                                Under Nilesh's leadership, we've expanded our services to include commercial fleets,
+                                emergency vehicles, marine applications, and specialized battery solutions. Today, we're
+                                proud to be the go-to battery experts for individuals, businesses, and government agencies
+                                throughout New South Wales.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-battery-blue rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-seedling text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-battery-blue">2010 - The Beginning</h4>
+                                    <p class="text-battery-gray">Founded by Nilesh Rohan in Parramatta</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-battery-yellow rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-expand-arrows-alt text-battery-blue text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-battery-blue">2015 - State Expansion</h4>
+                                    <p class="text-battery-gray">Extended services across NSW with mobile fleet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-battery-red rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-award text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-battery-blue">2020 - Industry Recognition</h4>
+                                    <p class="text-battery-gray">NSW Business Excellence Award winner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Values -->
+    <section class="py-32 bg-battery-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-bold text-battery-blue mb-8">Our Mission & Values</h3>
+                <div class="w-32 h-2 bg-battery-yellow mx-auto mb-8 rounded-full"></div>
+                <p class="text-2xl text-battery-gray max-w-4xl mx-auto leading-relaxed">
+                    Guided by our core values of reliability, service excellence, and community commitment
+                </p>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="max-w-4xl mx-auto mb-16 text-center">
+                <div class="bg-white rounded-2xl p-12 shadow-lg">
+                    <div class="bg-battery-blue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-6">Our Mission</h4>
+                    <p class="text-xl text-battery-gray italic">
+                        "To power NSW with reliable battery solutions and exceptional service, ensuring our customers 
+                        never experience the frustration of unexpected power failure. We're committed to being the 
+                        most trusted name in battery services across New South Wales."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-battery-blue rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-battery-blue mb-4">Reliability</h4>
+                    <p class="text-battery-gray">
+                        We stand behind every battery and service with unwavering reliability. Our customers trust us 
+                        because we consistently deliver on our promises.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-battery-yellow rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-2xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-battery-blue mb-4">Service Excellence</h4>
+                    <p class="text-battery-gray">
+                        Every interaction matters. We go above and beyond to provide exceptional service that exceeds 
+                        expectations and builds lasting relationships.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-battery-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-battery-blue mb-4">Community Commitment</h4>
+                    <p class="text-battery-gray">
+                        We're proud to be part of the NSW community, supporting local initiatives and maintaining 
+                        environmental responsibility in everything we do.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications and Accreditations -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-battery-blue mb-4">Certifications & Accreditations</h3>
+                <p class="text-xl text-battery-gray">
+                    Industry-leading certifications ensuring the highest standards of service and safety
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="bg-battery-blue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-certificate text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-battery-blue mb-4">NSW Fair Trading</h4>
+                    <p class="text-battery-gray">Licensed automotive service provider</p>
+                    <p class="text-sm text-battery-blue font-semibold mt-2">License #12345</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="bg-battery-yellow rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-battery-blue mb-4">ISO 9001:2015</h4>
+                    <p class="text-battery-gray">Quality management system certification</p>
+                    <p class="text-sm text-battery-blue font-semibold mt-2">Certified 2019</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="bg-battery-red rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-battery-blue mb-4">EPA Approved</h4>
+                    <p class="text-battery-gray">Environmental protection authority certified recycling</p>
+                    <p class="text-sm text-battery-blue font-semibold mt-2">Recycling Partner</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="bg-green-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-battery-blue mb-4">TAFE Certified</h4>
+                    <p class="text-battery-gray">All technicians TAFE automotive qualified</p>
+                    <p class="text-sm text-battery-blue font-semibold mt-2">Continuous Training</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-battery-blue mb-4">Service Coverage Across NSW</h3>
+                <p class="text-xl text-battery-gray">
+                    Comprehensive battery services from Sydney to the furthest corners of New South Wales
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gray-100 rounded-2xl p-12 text-center">
+                        <i class="fas fa-map-marked-alt text-8xl text-battery-blue mb-6"></i>
+                        <h4 class="text-2xl font-bold text-battery-blue mb-4">Complete NSW Coverage</h4>
+                        <p class="text-battery-gray mb-6">
+                            Our mobile service fleet covers every corner of New South Wales, from metropolitan Sydney 
+                            to rural and remote areas.
+                        </p>
+                        <button class="bg-battery-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-location-arrow mr-2"></i>Check Your Area
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <h4 class="text-2xl font-bold text-battery-blue">Primary Service Areas:</h4>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Greater Sydney</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Central Coast</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Newcastle</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Wollongong</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Blue Mountains</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Southern Highlands</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">Hunter Valley</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-blue"></i>
+                            <span class="text-gray-700">North Coast</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg p-6 mt-6">
+                        <h5 class="text-lg font-bold text-battery-blue mb-3">Mobile Service Promise:</h5>
+                        <ul class="space-y-2 text-battery-gray">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>30-minute response time in metro areas</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Same-day service in regional NSW</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 emergency service available</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Fleet vehicles equipped for all battery types</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Involvement & Environmental Commitment -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-battery-blue mb-4">Community & Environmental Commitment</h3>
+                <p class="text-xl text-battery-gray">
+                    Building stronger communities while protecting our environment for future generations
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Community Involvement -->
+                <div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-8">Community Involvement</h4>
+                    <div class="space-y-6">
+                        <div class="flex space-x-4">
+                            <div class="bg-battery-blue rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-heart text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">Emergency Services Support</h5>
+                                <p class="text-battery-gray">
+                                    We provide priority service and discounted rates for NSW emergency services, 
+                                    ensuring first responders have reliable power when communities need them most.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <div class="bg-battery-yellow rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-battery-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">TAFE Partnerships</h5>
+                                <p class="text-battery-gray">
+                                    We partner with TAFE NSW to provide real-world training opportunities for automotive 
+                                    students, helping develop the next generation of battery technicians.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <div class="bg-battery-red rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-hands-helping text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">Local Business Support</h5>
+                                <p class="text-battery-gray">
+                                    Supporting local NSW businesses with fleet services, bulk discounts, and priority 
+                                    scheduling to keep our community's commerce powered and running.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Environmental Commitment -->
+                <div>
+                    <h4 class="text-3xl font-bold text-battery-blue mb-8">Environmental Commitment</h4>
+                    <div class="space-y-6">
+                        <div class="flex space-x-4">
+                            <div class="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-recycle text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">100% Battery Recycling</h5>
+                                <p class="text-battery-gray">
+                                    Every old battery is responsibly recycled through EPA-approved facilities. We've 
+                                    diverted over 50,000 batteries from landfills since our inception.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <div class="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-leaf text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">Carbon Neutral Fleet</h5>
+                                <p class="text-battery-gray">
+                                    Our service fleet is transitioning to electric and hybrid vehicles, with a commitment 
+                                    to achieve carbon neutrality by 2025 through renewable energy and offset programs.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <div class="bg-purple-500 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-seedling text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold text-battery-blue mb-2">Sustainable Practices</h5>
+                                <p class="text-battery-gray">
+                                    From digital receipts to refillable cleaning supplies, every aspect of our operations 
+                                    is designed to minimize environmental impact while maximizing service quality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Company Values -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-battery-blue mb-4">Our Company Values</h3>
+                <p class="text-xl text-battery-gray">
+                    The principles that guide everything we do at Batteries Plus NSW
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-battery-blue to-blue-700 rounded-xl p-8 text-center text-white">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-3xl text-battery-blue"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Integrity First</h4>
+                    <p class="text-sm">We believe in honest pricing, transparent service, and always doing what's right for our customers, even when no one is watching.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-battery-yellow to-yellow-600 rounded-xl p-8 text-center text-battery-blue">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-battery-yellow"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Customer Focus</h4>
+                    <p class="text-sm">Every customer deserves our best effort. We listen, understand, and deliver solutions that exceed expectations every time.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-battery-red to-green-700 rounded-xl p-8 text-center text-white">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bolt text-3xl text-battery-red"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Speed & Reliability</h4>
+                    <p class="text-sm">When you need us, we're there. Fast response times and dependable service are not just goals, they're guarantees.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-8 text-center text-white">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-3xl text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Continuous Learning</h4>
+                    <p class="text-sm">Technology evolves, and so do we. Our team stays ahead with ongoing training and the latest battery innovations.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-8 text-center text-white">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Safety Always</h4>
+                    <p class="text-sm">Zero compromise on safety. Every installation, every service call, every day - your safety and ours comes first.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl p-8 text-center text-white">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl text-teal-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Environmental Care</h4>
+                    <p class="text-sm">We protect our planet through responsible battery recycling and sustainable practices in everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-battery-blue to-blue-800 rounded-2xl p-12 text-white text-center">
+                <h3 class="text-4xl font-bold mb-6">Ready to Experience the Difference?</h3>
+                <p class="text-xl mb-8">
+                    Join thousands of satisfied customers who trust Batteries Plus NSW for reliable power solutions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-battery-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-calculator mr-2"></i>Get Free Quote
+                    </button>
+                    <a href="tel:0439222665" class="bg-battery-red text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-600 transition duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i>Call 0439 222 665
+                    </a>
+                </div>
+                
+                <p class="text-blue-200 mt-6">
+                    <i class="fas fa-clock mr-2"></i>24/7 Emergency Service Available
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-6">
+                        <img src="photos/batteries_plus_logo_website.jpg"
+                             alt="Batteries Plus Logo"
+                             class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        NSW's most trusted battery specialists, providing professional battery services and replacement since 2010.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transition duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transition duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-battery-yellow transition duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-xl font-bold mb-6">Quick Links</h5>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-white font-semibold">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emergency Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h5 class="text-xl font-bold mb-6">Services</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Car Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Truck Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Marine Batteries</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emergency Vehicles</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Fleet Services</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="text-xl font-bold mb-6">Contact Us</h5>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-battery-yellow"></i>
+                            <span>0439 222 665</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-battery-yellow"></i>
+                            <span>info@batteriesplusnsw.com.au</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-battery-yellow mt-1"></i>
+                            <span>Multiple locations across NSW<br>Mobile service available</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-battery-yellow"></i>
+                            <span>24/7 Emergency Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Batteries Plus NSW. All rights reserved. | 
+                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactions and animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.group, .shadow-lg').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Counter animation for statistics
+            const counters = document.querySelectorAll('[class*="text-6xl"]');
+            const counterOptions = {
+                threshold: 0.7
+            };
+
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                    }
+                });
+            }, counterOptions);
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            function animateCounter(element) {
+                const target = element.textContent;
+                const isNumber = /^\d+/.test(target);
+                if (isNumber) {
+                    const finalNumber = parseInt(target.replace(/[^\d]/g, ''));
+                    let current = 0;
+                    const increment = finalNumber / 100;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= finalNumber) {
+                            current = finalNumber;
+                            clearInterval(timer);
+                        }
+                        element.textContent = target.replace(/^\d+/, Math.floor(current).toLocaleString());
+                    }, 20);
+                }
+            }
+        });
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .prose {
+            max-width: none;
+        }
+
+        .prose p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+    </style>
+</body>
+</html>
