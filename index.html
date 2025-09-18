@@ -74,23 +74,23 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
         <!-- Overlay -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50"></div>
 
         <!-- Menu Panel -->
-        <div class="fixed right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="mobile-menu-panel">
-            <div class="p-6">
+        <div class="fixed right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 translate-x-full overflow-y-auto" id="mobile-menu-panel">
+            <div class="p-6 pt-20">
                 <!-- Close button -->
-                <button id="mobile-menu-close" class="absolute top-6 right-6 text-battery-gray hover:text-battery-blue">
+                <button id="mobile-menu-close" class="absolute top-6 right-6 text-battery-gray hover:text-battery-blue z-10">
                     <i class="fas fa-times text-2xl"></i>
                 </button>
 
                 <!-- Logo -->
-                <div class="mb-8">
+                <div class="mb-8 -mt-8">
                     <img src="photos/batteries_plus_logo_website.jpg"
                          alt="Batteries Plus Logo"
-                         class="h-12 w-auto object-contain">
+                         class="h-10 w-auto object-contain">
                 </div>
 
                 <!-- Navigation Links -->
@@ -109,19 +109,6 @@
                     <button class="w-full bg-battery-yellow text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all duration-300">
                         Get Free Quote
                     </button>
-                </div>
-
-                <!-- Social Links -->
-                <div class="mt-8 flex justify-center space-x-6">
-                    <a href="#" class="text-battery-gray hover:text-battery-blue">
-                        <i class="fab fa-facebook text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-battery-gray hover:text-battery-blue">
-                        <i class="fab fa-instagram text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-battery-gray hover:text-battery-blue">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
                 </div>
             </div>
         </div>
