@@ -33,6 +33,126 @@
             }
         }
     </script>
+
+    <!-- X-Ray Vision Styles for Services Section -->
+    <style>
+        /* X-Ray Vision Effect */
+        .vehicle-container {
+            position: relative;
+            width: 180px;
+            height: 120px;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vehicle-silhouette {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.6s ease;
+        }
+
+        .battery-location {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.6s ease;
+            transform: scale(0.8);
+        }
+
+        .service-card:hover .vehicle-silhouette {
+            opacity: 0.2;
+        }
+
+        .service-card:hover .battery-location {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Energy flow animation */
+        @keyframes energy-flow {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+        }
+
+        .energy-line {
+            stroke-dasharray: 10 5;
+            stroke-dashoffset: 100;
+            animation: energy-flow 2s linear infinite;
+        }
+
+        .service-card:hover .energy-line {
+            opacity: 1;
+        }
+
+        /* Scan line effect */
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #FFC107, transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover .scan-line {
+            opacity: 0.8;
+            animation: scan 2s linear infinite;
+        }
+
+        /* Power level bars */
+        .power-bar {
+            height: 4px;
+            background: #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .power-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #22C55E, #FFC107);
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        .service-card:hover .power-fill {
+            width: 85%;
+        }
+
+        /* Emergency pulse for ambulance */
+        @keyframes emergency-pulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0));
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgba(239, 68, 68, 0.8));
+            }
+        }
+
+        .emergency-vehicle:hover {
+            animation: emergency-pulse 1s infinite;
+        }
+
+        /* Tech grid background */
+        .tech-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(0, 35, 117, 0.05) 10px, rgba(0, 35, 117, 0.05) 11px),
+                repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0, 35, 117, 0.05) 10px, rgba(0, 35, 117, 0.05) 11px);
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover .tech-grid {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="bg-white font-sans">
@@ -186,10 +306,125 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Car Batteries -->
-                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
-                    <div class="bg-battery-blue p-6 rounded-xl w-24 h-24 flex items-center justify-center mx-auto mb-8 shadow-lg">
-                        <i class="fas fa-car text-white text-3xl"></i>
+                <!-- Car Batteries with X-Ray Vision -->
+                <div class="service-card bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-500 rounded-2xl group relative overflow-hidden">
+                    <!-- X-Ray Vehicle Vision -->
+                    <div class="vehicle-container mx-auto mb-8 relative">
+                        <!-- Tech grid background -->
+                        <div class="tech-grid rounded-lg"></div>
+
+                        <!-- Scan line effect -->
+                        <div class="scan-line"></div>
+
+                        <!-- Modern Sedan Silhouette -->
+                        <svg class="vehicle-silhouette" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Car shadow -->
+                            <ellipse cx="90" cy="95" rx="70" ry="8" fill="#000" opacity="0.1"/>
+
+                            <!-- Main body -->
+                            <path d="M 25 75 L 25 70 C 25 68 27 66 29 66 L 35 66 L 45 48 C 46 46 48 45 50 45 L 130 45 C 132 45 134 46 135 48 L 145 66 L 151 66 C 153 66 155 68 155 70 L 155 75 L 155 82 C 155 84 153 86 151 86 L 145 86 L 145 85 L 35 85 L 35 86 L 29 86 C 27 86 25 84 25 82 Z"
+                                  fill="#002375" opacity="0.9"/>
+
+                            <!-- Hood detail -->
+                            <path d="M 25 72 L 40 72 L 43 68 L 137 68 L 140 72 L 155 72"
+                                  fill="none" stroke="#001a5e" stroke-width="1" opacity="0.5"/>
+
+                            <!-- Roof -->
+                            <path d="M 50 48 L 130 48 C 131 48 132 49 132 50 L 132 65 L 48 65 L 48 50 C 48 49 49 48 50 48 Z"
+                                  fill="#001a5e" opacity="0.7"/>
+
+                            <!-- Windows with gradient -->
+                            <defs>
+                                <linearGradient id="windowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:0.3" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Front windshield -->
+                            <path d="M 51 50 L 68 50 L 65 64 L 51 64 Z" fill="url(#windowGradient)"/>
+
+                            <!-- Rear windshield -->
+                            <path d="M 112 50 L 129 50 L 129 64 L 115 64 Z" fill="url(#windowGradient)"/>
+
+                            <!-- Side windows -->
+                            <rect x="71" y="51" width="18" height="13" fill="url(#windowGradient)" rx="1"/>
+                            <rect x="92" y="51" width="18" height="13" fill="url(#windowGradient)" rx="1"/>
+
+                            <!-- Door handles -->
+                            <rect x="73" y="70" width="8" height="2" fill="#6b7280" rx="1"/>
+                            <rect x="99" y="70" width="8" height="2" fill="#6b7280" rx="1"/>
+
+                            <!-- Front grille -->
+                            <rect x="23" y="73" width="2" height="8" fill="#374151" opacity="0.6"/>
+                            <rect x="23" y="74" width="4" height="1" fill="#6b7280" opacity="0.4"/>
+                            <rect x="23" y="76" width="4" height="1" fill="#6b7280" opacity="0.4"/>
+                            <rect x="23" y="78" width="4" height="1" fill="#6b7280" opacity="0.4"/>
+
+                            <!-- Headlights -->
+                            <ellipse cx="28" cy="72" rx="4" ry="3" fill="#fbbf24" opacity="0.6"/>
+                            <ellipse cx="28" cy="72" rx="2" ry="1.5" fill="#fef3c7" opacity="0.8"/>
+
+                            <!-- Taillights -->
+                            <rect x="155" y="72" width="3" height="6" fill="#dc2626" opacity="0.6" rx="1"/>
+
+                            <!-- Wheels with detail -->
+                            <g id="wheel">
+                                <circle cx="45" cy="86" r="11" fill="#1f2937"/>
+                                <circle cx="45" cy="86" r="9" fill="#374151"/>
+                                <circle cx="45" cy="86" r="7" fill="#4b5563"/>
+                                <!-- Rim spokes -->
+                                <path d="M 45 79 L 45 93 M 38 86 L 52 86 M 40 81 L 50 91 M 50 81 L 40 91"
+                                      stroke="#6b7280" stroke-width="0.5"/>
+                                <circle cx="45" cy="86" r="3" fill="#1f2937"/>
+                            </g>
+                            <!-- Rear wheel -->
+                            <use href="#wheel" x="90" y="0"/>
+
+                            <!-- Side mirror -->
+                            <ellipse cx="55" cy="65" rx="3" ry="2" fill="#002375" opacity="0.7"/>
+                        </svg>
+
+                        <!-- Battery Location (Under Hood) -->
+                        <div class="battery-location" style="top: 45px; left: 100px;">
+                            <svg width="40" height="30" viewBox="0 0 40 30">
+                                <!-- Battery -->
+                                <rect x="5" y="5" width="30" height="20" fill="#FFC107" stroke="#002375" stroke-width="2"/>
+                                <!-- Battery terminals -->
+                                <rect x="2" y="10" width="5" height="3" fill="#dc2626"/>
+                                <rect x="33" y="10" width="5" height="3" fill="#10b981"/>
+                                <!-- Battery label -->
+                                <text x="20" y="18" text-anchor="middle" font-size="8" font-weight="bold" fill="#002375">12V</text>
+                            </svg>
+
+                            <!-- Energy flow lines -->
+                            <svg class="absolute -top-2 -left-2" width="150" height="60">
+                                <path d="M 42 17 Q 60 10 80 15 Q 100 20 120 15"
+                                      fill="none" stroke="#FFC107" stroke-width="2"
+                                      class="energy-line" opacity="0.8"/>
+                                <circle cx="42" cy="17" r="3" fill="#FFC107" opacity="0.8">
+                                    <animate attributeName="opacity" values="0.8;1;0.8" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </div>
+
+                        <!-- Hood indicator on hover -->
+                        <div class="absolute top-12 left-24 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-battery-yellow text-battery-blue px-2 py-1 rounded text-xs font-bold">
+                                Under Hood
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power Level Indicator -->
+                    <div class="mb-6 space-y-2">
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>Power Level</span>
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity">85%</span>
+                        </div>
+                        <div class="power-bar">
+                            <div class="power-fill"></div>
+                        </div>
                     </div>
                     <h4 class="text-3xl font-bold text-battery-blue mb-6">Car Batteries</h4>
                     <p class="text-battery-gray mb-8 leading-relaxed text-lg">
@@ -205,10 +440,156 @@
                     </button>
                 </div>
 
-                <!-- Truck Batteries -->
-                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
-                    <div class="bg-battery-blue p-6 rounded-xl w-24 h-24 flex items-center justify-center mx-auto mb-8 shadow-lg">
-                        <i class="fas fa-truck text-white text-3xl"></i>
+                <!-- Truck Batteries with X-Ray Vision -->
+                <div class="service-card bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-500 rounded-2xl group relative overflow-hidden">
+                    <!-- X-Ray Truck Vision -->
+                    <div class="vehicle-container mx-auto mb-8 relative">
+                        <!-- Tech grid background -->
+                        <div class="tech-grid rounded-lg"></div>
+
+                        <!-- Scan line effect -->
+                        <div class="scan-line"></div>
+
+                        <!-- Heavy Duty Truck Silhouette -->
+                        <svg class="vehicle-silhouette" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Truck shadow -->
+                            <ellipse cx="90" cy="95" rx="75" ry="8" fill="#000" opacity="0.1"/>
+
+                            <!-- Main cabin structure -->
+                            <path d="M 15 82 L 15 38 C 15 36 17 34 19 34 L 65 34 C 67 34 69 36 69 38 L 69 82 C 69 84 67 86 65 86 L 19 86 C 17 86 15 84 15 82 Z"
+                                  fill="#002375" opacity="0.95"/>
+
+                            <!-- Cabin roof -->
+                            <rect x="15" y="30" width="54" height="4" fill="#001a5e" rx="2"/>
+
+                            <!-- Windshield with gradient -->
+                            <defs>
+                                <linearGradient id="truckWindow" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.7" />
+                                    <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:0.4" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Front windshield -->
+                            <rect x="20" y="38" width="44" height="22" fill="url(#truckWindow)" rx="2"/>
+
+                            <!-- Door window -->
+                            <rect x="20" y="62" width="20" height="15" fill="url(#truckWindow)" rx="1"/>
+                            <rect x="44" y="62" width="20" height="15" fill="url(#truckWindow)" rx="1"/>
+
+                            <!-- Truck bed/cargo area -->
+                            <path d="M 69 45 L 165 45 C 167 45 169 47 169 49 L 169 82 C 169 84 167 86 165 86 L 69 86 Z"
+                                  fill="#001a5e" opacity="0.85"/>
+
+                            <!-- Cargo bed details -->
+                            <rect x="72" y="48" width="94" height="35" fill="#002375" opacity="0.6"/>
+
+                            <!-- Cargo rails -->
+                            <rect x="72" y="48" width="94" height="2" fill="#374151" opacity="0.8"/>
+                            <rect x="72" y="81" width="94" height="2" fill="#374151" opacity="0.8"/>
+
+                            <!-- Vertical supports -->
+                            <rect x="85" y="48" width="2" height="35" fill="#374151" opacity="0.5"/>
+                            <rect x="105" y="48" width="2" height="35" fill="#374151" opacity="0.5"/>
+                            <rect x="125" y="48" width="2" height="35" fill="#374151" opacity="0.5"/>
+                            <rect x="145" y="48" width="2" height="35" fill="#374151" opacity="0.5"/>
+
+                            <!-- Door handle and details -->
+                            <rect x="35" y="68" width="8" height="2" fill="#6b7280" rx="1"/>
+                            <rect x="56" y="68" width="8" height="2" fill="#6b7280" rx="1"/>
+
+                            <!-- Front grille -->
+                            <rect x="13" y="65" width="2" height="15" fill="#1f2937"/>
+                            <rect x="13" y="67" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+                            <rect x="13" y="69" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+                            <rect x="13" y="71" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+                            <rect x="13" y="73" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+                            <rect x="13" y="75" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+                            <rect x="13" y="77" width="4" height="1" fill="#6b7280" opacity="0.7"/>
+
+                            <!-- Headlights -->
+                            <ellipse cx="16" cy="58" rx="3" ry="4" fill="#fbbf24" opacity="0.7"/>
+                            <ellipse cx="16" cy="58" rx="1.5" ry="2" fill="#fef3c7" opacity="0.9"/>
+
+                            <!-- Side lights -->
+                            <rect x="20" y="40" width="8" height="1" fill="#fb923c" opacity="0.6"/>
+
+                            <!-- Exhaust stack -->
+                            <rect x="66" y="25" width="3" height="10" fill="#374151" rx="1"/>
+                            <rect x="65" y="24" width="5" height="2" fill="#1f2937"/>
+
+                            <!-- Heavy duty wheels -->
+                            <g id="truckWheel">
+                                <circle cx="35" cy="88" r="10" fill="#1f2937"/>
+                                <circle cx="35" cy="88" r="8" fill="#374151"/>
+                                <circle cx="35" cy="88" r="6" fill="#4b5563"/>
+                                <!-- Heavy duty rim -->
+                                <circle cx="35" cy="88" r="4" fill="#6b7280"/>
+                                <path d="M 35 84 L 35 92 M 31 88 L 39 88"
+                                      stroke="#1f2937" stroke-width="1"/>
+                                <circle cx="35" cy="88" r="2" fill="#1f2937"/>
+                            </g>
+
+                            <!-- Dual rear wheels -->
+                            <use href="#truckWheel" x="50" y="0"/>
+                            <use href="#truckWheel" x="70" y="0"/>
+
+                            <use href="#truckWheel" x="95" y="0"/>
+                            <use href="#truckWheel" x="115" y="0"/>
+
+                            <!-- Mud flaps -->
+                            <rect x="43" y="86" width="3" height="6" fill="#1f2937" opacity="0.6"/>
+                            <rect x="146" y="86" width="3" height="6" fill="#1f2937" opacity="0.6"/>
+
+                            <!-- Side mirror -->
+                            <rect x="12" y="55" width="3" height="4" fill="#002375" opacity="0.7" rx="1"/>
+                        </svg>
+
+                        <!-- Dual Battery System -->
+                        <div class="battery-location" style="top: 50px; left: 30px;">
+                            <!-- Battery 1 -->
+                            <svg width="35" height="25" viewBox="0 0 35 25">
+                                <rect x="2" y="2" width="30" height="20" fill="#FFC107" stroke="#002375" stroke-width="2"/>
+                                <rect x="0" y="7" width="4" height="3" fill="#dc2626"/>
+                                <rect x="30" y="7" width="4" height="3" fill="#10b981"/>
+                                <text x="17" y="15" text-anchor="middle" font-size="7" font-weight="bold" fill="#002375">24V</text>
+                            </svg>
+
+                            <!-- Battery 2 (parallel) -->
+                            <svg width="35" height="25" viewBox="0 0 35 25" style="position: absolute; top: 20px; left: 5px;">
+                                <rect x="2" y="2" width="30" height="20" fill="#FFC107" stroke="#002375" stroke-width="2" opacity="0.8"/>
+                                <rect x="0" y="7" width="4" height="3" fill="#dc2626"/>
+                                <rect x="30" y="7" width="4" height="3" fill="#10b981"/>
+                                <text x="17" y="15" text-anchor="middle" font-size="7" font-weight="bold" fill="#002375">24V</text>
+                            </svg>
+
+                            <!-- Connection lines -->
+                            <svg class="absolute -top-5 -left-5" width="160" height="80">
+                                <line x1="40" y1="20" x2="40" y2="35" stroke="#dc2626" stroke-width="3" opacity="0.6"/>
+                                <line x1="40" y1="35" x2="60" y2="35" stroke="#FFC107" stroke-width="2" class="energy-line"/>
+                                <circle cx="40" cy="20" r="4" fill="#dc2626" opacity="0.8">
+                                    <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </div>
+
+                        <!-- Dual Battery indicator -->
+                        <div class="absolute top-12 left-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-battery-yellow text-battery-blue px-2 py-1 rounded text-xs font-bold">
+                                Dual System
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power Level Indicator -->
+                    <div class="mb-6 space-y-2">
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>Heavy Duty Power</span>
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity">24V x2</span>
+                        </div>
+                        <div class="power-bar">
+                            <div class="power-fill" style="background: linear-gradient(90deg, #22C55E, #FFC107, #f97316);"></div>
+                        </div>
                     </div>
                     <h4 class="text-3xl font-bold text-battery-blue mb-6">Truck Batteries</h4>
                     <p class="text-battery-gray mb-8 leading-relaxed text-lg">
@@ -224,10 +605,166 @@
                     </button>
                 </div>
 
-                <!-- Emergency Vehicle Batteries -->
-                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-red hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
-                    <div class="bg-battery-red p-6 rounded-xl w-24 h-24 flex items-center justify-center mx-auto mb-8 shadow-lg">
-                        <i class="fas fa-ambulance text-white text-3xl"></i>
+                <!-- Emergency Vehicle Batteries with X-Ray Vision -->
+                <div class="service-card emergency-vehicle bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-red hover:shadow-2xl transform hover:scale-105 transition-all duration-500 rounded-2xl group relative overflow-hidden">
+                    <!-- X-Ray Ambulance Vision -->
+                    <div class="vehicle-container mx-auto mb-8 relative">
+                        <!-- Tech grid background -->
+                        <div class="tech-grid rounded-lg"></div>
+
+                        <!-- Scan line effect -->
+                        <div class="scan-line"></div>
+
+                        <!-- Modern Ambulance Silhouette -->
+                        <svg class="vehicle-silhouette" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shadow -->
+                            <ellipse cx="90" cy="95" rx="75" ry="8" fill="#000" opacity="0.1"/>
+
+                            <!-- Main ambulance body -->
+                            <path d="M 18 82 L 18 42 C 18 40 20 38 22 38 L 156 38 C 158 38 160 40 160 42 L 160 82 C 160 84 158 86 156 86 L 22 86 C 20 86 18 84 18 82 Z"
+                                  fill="white" opacity="0.95"/>
+
+                            <!-- Red stripe pattern -->
+                            <rect x="18" y="55" width="142" height="12" fill="#ef4444" opacity="0.9"/>
+                            <rect x="18" y="38" width="142" height="3" fill="#ef4444" opacity="0.8"/>
+                            <rect x="18" y="83" width="142" height="3" fill="#ef4444" opacity="0.8"/>
+
+                            <!-- Front cabin section -->
+                            <path d="M 18 42 C 18 40 20 38 22 38 L 65 38 L 65 86 L 22 86 C 20 86 18 84 18 82 Z"
+                                  fill="#f5f5f5" opacity="0.3"/>
+
+                            <!-- Windshield with gradient -->
+                            <defs>
+                                <linearGradient id="ambulanceWindow" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.7" />
+                                    <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:0.4" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Front windshield -->
+                            <path d="M 22 42 L 60 42 L 60 54 L 22 54 Z" fill="url(#ambulanceWindow)"/>
+
+                            <!-- Side cabin window -->
+                            <rect x="22" y="70" width="18" height="10" fill="url(#ambulanceWindow)" rx="1"/>
+                            <rect x="44" y="70" width="18" height="10" fill="url(#ambulanceWindow)" rx="1"/>
+
+                            <!-- Rear patient windows -->
+                            <rect x="75" y="43" width="35" height="10" fill="url(#ambulanceWindow)" rx="1"/>
+                            <rect x="115" y="43" width="35" height="10" fill="url(#ambulanceWindow)" rx="1"/>
+
+                            <!-- Star of Life (Medical Symbol) -->
+                            <g transform="translate(100, 61)">
+                                <circle r="15" fill="white" opacity="0.95"/>
+                                <path d="M 0 -12 L 0 12 M -10.4 -6 L 10.4 6 M -10.4 6 L 10.4 -6"
+                                      stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+                                <!-- Snake and rod in center -->
+                                <rect x="-2" y="-8" width="4" height="16" fill="#3b82f6"/>
+                            </g>
+
+                            <!-- Emergency light bar -->
+                            <rect x="30" y="32" width="120" height="6" fill="#1f2937" rx="3"/>
+                            <!-- Individual lights -->
+                            <ellipse cx="45" cy="35" rx="8" ry="3" fill="#3b82f6">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="65" cy="35" rx="8" ry="3" fill="white">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" begin="0.2s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="85" cy="35" rx="8" ry="3" fill="#ef4444">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" begin="0.4s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="105" cy="35" rx="8" ry="3" fill="white">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" begin="0.6s" repeatCount="indefinite"/>
+                            </ellipse>
+                            <ellipse cx="125" cy="35" rx="8" ry="3" fill="#3b82f6">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" begin="0.8s" repeatCount="indefinite"/>
+                            </ellipse>
+
+                            <!-- Front grille/bumper -->
+                            <rect x="15" y="78" width="3" height="6" fill="#374151"/>
+                            <rect x="15" y="44" width="3" height="6" fill="#374151"/>
+
+                            <!-- Headlights -->
+                            <ellipse cx="17" cy="65" rx="3" ry="4" fill="#fbbf24" opacity="0.8"/>
+                            <ellipse cx="17" cy="65" rx="1.5" ry="2" fill="#fef3c7"/>
+
+                            <!-- Side emergency markers -->
+                            <rect x="70" y="75" width="6" height="2" fill="#f97316" opacity="0.7"/>
+                            <rect x="80" y="75" width="6" height="2" fill="#f97316" opacity="0.7"/>
+                            <rect x="90" y="75" width="6" height="2" fill="#f97316" opacity="0.7"/>
+
+                            <!-- AMBULANCE text (reversed for front view) -->
+                            <text x="40" y="50" font-size="6" font-weight="bold" fill="#ef4444" opacity="0.8" transform="scale(-1,1) translate(-80,0)">AMBULANCE</text>
+
+                            <!-- Wheels with detail -->
+                            <g id="ambulanceWheel">
+                                <circle cx="35" cy="88" r="10" fill="#1f2937"/>
+                                <circle cx="35" cy="88" r="8" fill="#374151"/>
+                                <circle cx="35" cy="88" r="6" fill="#4b5563"/>
+                                <circle cx="35" cy="88" r="3" fill="#6b7280"/>
+                                <circle cx="35" cy="88" r="2" fill="#1f2937"/>
+                            </g>
+                            <use href="#ambulanceWheel" x="110" y="0"/>
+
+                            <!-- Side mirrors with emergency lights -->
+                            <ellipse cx="62" cy="56" rx="3" ry="2" fill="#ef4444" opacity="0.7">
+                                <animate attributeName="opacity" values="0.7;1;0.7" dur="1s" repeatCount="indefinite"/>
+                            </ellipse>
+
+                            <!-- Rear doors outline -->
+                            <rect x="155" y="42" width="2" height="44" fill="#d4d4d8" opacity="0.5"/>
+                            <rect x="155" y="62" width="5" height="3" fill="#6b7280" opacity="0.7"/>
+                        </svg>
+
+                        <!-- Critical Battery System with Backup -->
+                        <div class="battery-location" style="top: 55px; left: 25px;">
+                            <!-- Main Battery -->
+                            <svg width="40" height="30" viewBox="0 0 40 30">
+                                <rect x="5" y="5" width="30" height="20" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+                                <rect x="2" y="10" width="5" height="3" fill="#dc2626"/>
+                                <rect x="33" y="10" width="5" height="3" fill="#10b981"/>
+                                <text x="20" y="18" text-anchor="middle" font-size="7" font-weight="bold" fill="white">CRITICAL</text>
+                            </svg>
+
+                            <!-- Backup Battery System -->
+                            <svg width="30" height="20" viewBox="0 0 30 20" style="position: absolute; top: -20px; left: 45px;">
+                                <rect x="2" y="2" width="25" height="15" fill="#3b82f6" stroke="#002375" stroke-width="1.5" opacity="0.8"/>
+                                <text x="14" y="12" text-anchor="middle" font-size="6" fill="white">BACKUP</text>
+                            </svg>
+
+                            <!-- Power distribution lines -->
+                            <svg class="absolute -top-8 -left-8" width="180" height="100">
+                                <!-- Main power line -->
+                                <path d="M 45 35 L 80 35 L 80 50 L 120 50"
+                                      fill="none" stroke="#ef4444" stroke-width="3" opacity="0.6"/>
+                                <!-- Backup power line -->
+                                <path d="M 75 25 L 90 25 L 90 45"
+                                      fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6" stroke-dasharray="3,2"/>
+                                <!-- Energy pulse -->
+                                <circle cx="45" cy="35" r="3" fill="#ef4444">
+                                    <animate attributeName="cx" values="45;120;45" dur="3s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </div>
+
+                        <!-- Critical System indicator -->
+                        <div class="absolute top-8 left-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold animate-pulse">
+                                LIFE CRITICAL + BACKUP
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power Level Indicator -->
+                    <div class="mb-6 space-y-2">
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>System Status</span>
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity text-red-600 font-bold">PRIORITY</span>
+                        </div>
+                        <div class="power-bar">
+                            <div class="power-fill" style="background: linear-gradient(90deg, #ef4444, #3b82f6); width: 100%;"></div>
+                        </div>
                     </div>
                     <h4 class="text-3xl font-bold text-battery-red mb-6">Emergency Vehicle</h4>
                     <p class="text-battery-gray mb-8 leading-relaxed text-lg">
@@ -243,10 +780,175 @@
                     </button>
                 </div>
 
-                <!-- Marine Batteries -->
-                <div class="bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
-                    <div class="bg-battery-blue p-6 rounded-xl w-24 h-24 flex items-center justify-center mx-auto mb-8 shadow-lg">
-                        <i class="fas fa-ship text-white text-3xl"></i>
+                <!-- Marine Batteries with X-Ray Vision -->
+                <div class="service-card bg-white border-3 border-gray-200 p-10 text-center hover:border-battery-blue hover:shadow-2xl transform hover:scale-105 transition-all duration-500 rounded-2xl group relative overflow-hidden">
+                    <!-- X-Ray Boat Vision -->
+                    <div class="vehicle-container mx-auto mb-8 relative">
+                        <!-- Tech grid background -->
+                        <div class="tech-grid rounded-lg"></div>
+
+                        <!-- Scan line effect -->
+                        <div class="scan-line"></div>
+
+                        <!-- Modern Speed Boat Silhouette -->
+                        <svg class="vehicle-silhouette" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Water reflection/shadow -->
+                            <ellipse cx="90" cy="92" rx="70" ry="6" fill="#0284c7" opacity="0.15"/>
+
+                            <!-- Hull gradient -->
+                            <defs>
+                                <linearGradient id="hullGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+                                    <stop offset="50%" style="stop-color:#f0f9ff;stop-opacity:0.95" />
+                                    <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0.9" />
+                                </linearGradient>
+                                <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#0369a1;stop-opacity:0.6" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Main hull -->
+                            <path d="M 25 75 C 25 73 27 70 30 68 L 35 65 L 45 62 L 90 60 L 135 62 L 145 65 L 150 68 C 153 70 155 73 155 75 L 155 82 C 155 84 154 85 152 86 L 150 87 L 30 87 L 28 86 C 26 85 25 84 25 82 Z"
+                                  fill="url(#hullGradient)"/>
+
+                            <!-- Hull stripe -->
+                            <path d="M 25 75 L 155 75 L 152 78 L 28 78 Z" fill="#0284c7" opacity="0.8"/>
+                            <path d="M 30 68 L 150 68 L 150 70 L 30 70 Z" fill="#ef4444" opacity="0.7"/>
+
+                            <!-- Deck -->
+                            <path d="M 35 65 L 145 65 L 140 62 L 40 62 Z" fill="#f5f5f5" opacity="0.9"/>
+
+                            <!-- Cabin/Windshield structure -->
+                            <path d="M 55 45 L 55 60 L 125 60 L 125 45 C 125 43 123 41 121 41 L 59 41 C 57 41 55 43 55 45 Z"
+                                  fill="#0369a1" opacity="0.85"/>
+
+                            <!-- Windshield with gradient -->
+                            <defs>
+                                <linearGradient id="boatWindow" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#7dd3fc;stop-opacity:0.4" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Front windshield -->
+                            <path d="M 60 44 L 60 57 L 85 57 L 88 44 Z" fill="url(#boatWindow)"/>
+                            <path d="M 92 44 L 95 57 L 120 57 L 120 44 Z" fill="url(#boatWindow)"/>
+
+                            <!-- T-top/Canopy -->
+                            <rect x="55" y="38" width="70" height="3" fill="#1e293b" rx="1"/>
+                            <rect x="85" y="41" width="3" height="20" fill="#374151"/>
+                            <rect x="97" y="41" width="3" height="20" fill="#374151"/>
+
+                            <!-- Seats -->
+                            <rect x="65" y="55" width="15" height="5" fill="#dc2626" opacity="0.7" rx="1"/>
+                            <rect x="85" y="55" width="15" height="5" fill="#dc2626" opacity="0.7" rx="1"/>
+                            <rect x="105" y="55" width="15" height="5" fill="#dc2626" opacity="0.7" rx="1"/>
+
+                            <!-- Steering console -->
+                            <rect x="88" y="50" width="8" height="8" fill="#1f2937" opacity="0.8" rx="1"/>
+                            <circle cx="92" cy="54" r="2" fill="#374151"/>
+
+                            <!-- Navigation lights -->
+                            <circle cx="28" cy="70" r="2" fill="#ef4444" opacity="0.8"/>
+                            <circle cx="152" cy="70" r="2" fill="#10b981" opacity="0.8"/>
+
+                            <!-- Bow rail -->
+                            <path d="M 30 65 Q 45 63 60 63" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.7"/>
+                            <path d="M 120 63 Q 135 63 150 65" fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.7"/>
+
+                            <!-- Outboard motor -->
+                            <rect x="153" y="72" width="12" height="15" fill="#1f2937" rx="2"/>
+                            <rect x="155" y="70" width="8" height="3" fill="#374151"/>
+                            <!-- Propeller -->
+                            <ellipse cx="159" cy="84" rx="6" ry="2" fill="#6b7280" transform="rotate(-15 159 84)"/>
+                            <ellipse cx="159" cy="84" rx="6" ry="2" fill="#6b7280" transform="rotate(45 159 84)"/>
+
+                            <!-- Registration number -->
+                            <text x="35" y="74" font-size="5" font-weight="bold" fill="#1f2937" opacity="0.7">NSW-12345</text>
+
+                            <!-- Water waves -->
+                            <path d="M 10 88 Q 25 86 40 88 T 70 88 T 100 88 T 130 88 T 160 88 T 175 88"
+                                  fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.4">
+                                <animate attributeName="d"
+                                         values="M 10 88 Q 25 86 40 88 T 70 88 T 100 88 T 130 88 T 160 88 T 175 88;
+                                                 M 10 88 Q 25 90 40 88 T 70 88 T 100 88 T 130 88 T 160 88 T 175 88;
+                                                 M 10 88 Q 25 86 40 88 T 70 88 T 100 88 T 130 88 T 160 88 T 175 88"
+                                         dur="3s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M 5 91 Q 20 89 35 91 T 65 91 T 95 91 T 125 91 T 155 91 T 175 91"
+                                  fill="none" stroke="#0284c7" stroke-width="1.5" opacity="0.3">
+                                <animate attributeName="d"
+                                         values="M 5 91 Q 20 89 35 91 T 65 91 T 95 91 T 125 91 T 155 91 T 175 91;
+                                                 M 5 91 Q 20 93 35 91 T 65 91 T 95 91 T 125 91 T 155 91 T 175 91;
+                                                 M 5 91 Q 20 89 35 91 T 65 91 T 95 91 T 125 91 T 155 91 T 175 91"
+                                         dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+                            </path>
+
+                            <!-- Wake/spray effect -->
+                            <ellipse cx="30" cy="85" rx="8" ry="3" fill="white" opacity="0.3">
+                                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+                            </ellipse>
+                        </svg>
+
+                        <!-- Marine Battery System -->
+                        <div class="battery-location" style="top: 60px; left: 70px;">
+                            <!-- Sealed Marine Battery -->
+                            <svg width="45" height="35" viewBox="0 0 45 35">
+                                <!-- Waterproof casing -->
+                                <rect x="3" y="3" width="38" height="28" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="3,1" rx="2"/>
+                                <!-- Battery core -->
+                                <rect x="6" y="6" width="32" height="22" fill="#0ea5e9" stroke="#0369a1" stroke-width="2"/>
+                                <!-- Terminals with covers -->
+                                <rect x="3" y="12" width="5" height="4" fill="#dc2626"/>
+                                <rect x="36" y="12" width="5" height="4" fill="#10b981"/>
+                                <!-- Marine label -->
+                                <text x="22" y="14" text-anchor="middle" font-size="6" font-weight="bold" fill="white">MARINE</text>
+                                <text x="22" y="22" text-anchor="middle" font-size="5" fill="white">DEEP CYCLE</text>
+                            </svg>
+
+                            <!-- Waterproof seal indicator -->
+                            <div class="absolute -top-3 right-0">
+                                <div class="bg-blue-600 text-white px-1 py-0.5 rounded text-xs font-bold">
+                                    IP67
+                                </div>
+                            </div>
+
+                            <!-- Water resistance animation -->
+                            <svg class="absolute -top-6 -left-6" width="180" height="100">
+                                <!-- Water droplets that bounce off -->
+                                <circle cx="50" cy="20" r="2" fill="#0ea5e9" opacity="0.6">
+                                    <animate attributeName="cy" values="20;45;20" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="70" cy="15" r="2" fill="#0ea5e9" opacity="0.6">
+                                    <animate attributeName="cy" values="15;40;15" dur="2.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <!-- Protection shield effect -->
+                                <ellipse cx="55" cy="45" rx="35" ry="25" fill="none" stroke="#0ea5e9" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
+                                    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+                                </ellipse>
+                            </svg>
+                        </div>
+
+                        <!-- Marine indicator -->
+                        <div class="absolute top-14 left-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold">
+                                Sealed System
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power Level Indicator -->
+                    <div class="mb-6 space-y-2">
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>Deep Cycle Power</span>
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity">100% Waterproof</span>
+                        </div>
+                        <div class="power-bar">
+                            <div class="power-fill" style="background: linear-gradient(90deg, #0ea5e9, #22C55E);"></div>
+                        </div>
                     </div>
                     <h4 class="text-3xl font-bold text-battery-blue mb-6">Marine Batteries</h4>
                     <p class="text-battery-gray mb-8 leading-relaxed text-lg">
@@ -859,6 +1561,24 @@
                 if (e.target === this) {
                     closeLightbox();
                 }
+            });
+
+            // X-Ray Vision hover effects for service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    // Trigger X-ray vision effect
+                    const scanLine = this.querySelector('.scan-line');
+                    if (scanLine) {
+                        scanLine.style.animationPlayState = 'running';
+                    }
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    const scanLine = this.querySelector('.scan-line');
+                    if (scanLine) {
+                        scanLine.style.animationPlayState = 'paused';
+                    }
+                });
             });
 
             // Close lightbox with escape key
