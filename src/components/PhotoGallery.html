@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Components - Batteries Plus NSW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#1e40af',
+                        'battery-green': '#059669',
+                        'battery-yellow': '#f59e0b',
+                        'battery-red': '#dc2626',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-in-out',
+                        'scale-in': 'scaleIn 0.2s ease-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'shimmer': 'shimmer 2s infinite linear',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Photo Gallery Header -->
+    <header class="bg-white shadow-sm py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Battery Services Gallery</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See our professional battery installation services, state-of-the-art facilities, and satisfied customers across NSW</p>
+            </div>
+
+            <!-- Photo Category Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mt-8" id="category-filters">
+                <button class="filter-btn active bg-battery-blue text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg" data-filter="all">
+                    <i class="fas fa-th mr-2"></i>All Photos
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium border border-gray-200 hover:border-battery-blue hover:text-battery-blue transition-all duration-300" data-filter="installation">
+                    <i class="fas fa-tools mr-2"></i>Installation
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium border border-gray-200 hover:border-battery-blue hover:text-battery-blue transition-all duration-300" data-filter="facilities">
+                    <i class="fas fa-building mr-2"></i>Facilities
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium border border-gray-200 hover:border-battery-blue hover:text-battery-blue transition-all duration-300" data-filter="emergency">
+                    <i class="fas fa-ambulance mr-2"></i>Emergency Services
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium border border-gray-200 hover:border-battery-blue hover:text-battery-blue transition-all duration-300" data-filter="testimonials">
+                    <i class="fas fa-users mr-2"></i>Customer Stories
+                </button>
+                <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-medium border border-gray-200 hover:border-battery-blue hover:text-battery-blue transition-all duration-300" data-filter="products">
+                    <i class="fas fa-battery-full mr-2"></i>Products
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Photo Gallery Section -->
+    <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Masonry Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="photo-gallery">
+
+                <!-- Installation Photos -->
+                <div class="photo-item animate-fade-in" data-category="installation">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x400/1e40af/ffffff?text=Professional+Installation', 'Professional Battery Installation', 'Expert technician installing a premium car battery with proper safety protocols')">
+                        <div class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-battery-blue to-blue-800">
+                            <img src="https://via.placeholder.com/600x400/1e40af/ffffff?text=Professional+Installation"
+                                 alt="Professional battery installation service"
+                                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Professional Installation</h3>
+                            <p class="text-gray-200 text-sm">Expert battery installation service</p>
+                        </div>
+                        <!-- Category Badge -->
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-blue text-white px-3 py-1 rounded-full text-xs font-medium">Installation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-item animate-fade-in" data-category="installation">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x500/1e40af/ffffff?text=Mobile+Service', 'Mobile Battery Service', 'Our mobile service team providing on-site battery replacement')">
+                        <div class="aspect-w-4 aspect-h-5 bg-gradient-to-br from-battery-blue to-blue-800">
+                            <img src="https://via.placeholder.com/600x500/1e40af/ffffff?text=Mobile+Service"
+                                 alt="Mobile battery service truck"
+                                 class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Mobile Service</h3>
+                            <p class="text-gray-200 text-sm">We come to you</p>
+                        </div>
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-blue text-white px-3 py-1 rounded-full text-xs font-medium">Installation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facilities Photos -->
+                <div class="photo-item animate-fade-in" data-category="facilities">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x400/059669/ffffff?text=Modern+Workshop', 'Modern Workshop Facility', 'State-of-the-art workshop with latest battery testing equipment')">
+                        <div class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-battery-green to-green-800">
+                            <img src="https://via.placeholder.com/600x400/059669/ffffff?text=Modern+Workshop"
+                                 alt="Modern battery workshop facility"
+                                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Modern Workshop</h3>
+                            <p class="text-gray-200 text-sm">State-of-the-art facilities</p>
+                        </div>
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-green text-white px-3 py-1 rounded-full text-xs font-medium">Facilities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Services Photos -->
+                <div class="photo-item animate-fade-in" data-category="emergency">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x600/dc2626/ffffff?text=Ambulance+Service', 'Emergency Vehicle Service', 'Installing critical batteries in emergency vehicles')">
+                        <div class="aspect-w-1 aspect-h-1 bg-gradient-to-br from-battery-red to-red-800">
+                            <img src="https://via.placeholder.com/600x600/dc2626/ffffff?text=Ambulance+Service"
+                                 alt="Emergency vehicle battery service"
+                                 class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Emergency Services</h3>
+                            <p class="text-gray-200 text-sm">Critical vehicle support</p>
+                        </div>
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-red text-white px-3 py-1 rounded-full text-xs font-medium">Emergency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Testimonials with Photos -->
+                <div class="photo-item animate-fade-in" data-category="testimonials">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x400/f59e0b/ffffff?text=Happy+Customer', 'Satisfied Customer', 'Customer testimonial with their newly serviced vehicle')">
+                        <div class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-battery-yellow to-yellow-600">
+                            <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Happy+Customer"
+                                 alt="Satisfied customer testimonial"
+                                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Happy Customer</h3>
+                            <p class="text-gray-200 text-sm">5-star service experience</p>
+                        </div>
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-yellow text-gray-900 px-3 py-1 rounded-full text-xs font-medium">Customer Story</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Photos -->
+                <div class="photo-item animate-fade-in" data-category="products">
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                         onclick="openLightbox('https://via.placeholder.com/600x400/1e40af/ffffff?text=Premium+Batteries', 'Premium Battery Range', 'Our premium battery collection with extended warranties')">
+                        <div class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-battery-blue to-blue-800">
+                            <img src="https://via.placeholder.com/600x400/1e40af/ffffff?text=Premium+Batteries"
+                                 alt="Premium battery products range"
+                                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-expand text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">Premium Batteries</h3>
+                            <p class="text-gray-200 text-sm">Top-quality products</p>
+                        </div>
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-battery-blue text-white px-3 py-1 rounded-full text-xs font-medium">Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading Skeleton Items (hidden by default) -->
+                <div class="photo-skeleton hidden" id="photo-skeleton-template">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-pulse">
+                        <div class="h-64 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
+                        </div>
+                        <div class="p-4">
+                            <div class="h-4 bg-gray-200 rounded mb-2"></div>
+                            <div class="h-3 bg-gray-200 rounded w-2/3"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-battery-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200">
+                    <i class="fas fa-plus mr-2"></i>Load More Photos
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4">
+        <div class="relative max-w-5xl max-h-full">
+            <!-- Close Button -->
+            <button onclick="closeLightbox()"
+                    class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
+                    aria-label="Close lightbox">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+
+            <!-- Navigation Arrows -->
+            <button onclick="previousPhoto()"
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded p-2"
+                    aria-label="Previous photo" id="prev-btn">
+                <i class="fas fa-chevron-left text-2xl"></i>
+            </button>
+            <button onclick="nextPhoto()"
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded p-2"
+                    aria-label="Next photo" id="next-btn">
+                <i class="fas fa-chevron-right text-2xl"></i>
+            </button>
+
+            <!-- Photo Container -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-2xl animate-scale-in max-w-full max-h-[90vh] flex flex-col">
+                <img id="lightbox-image" src="" alt="" class="w-full max-h-[70vh] object-contain">
+                <div class="p-6">
+                    <h2 id="lightbox-title" class="text-2xl font-bold text-gray-900 mb-2"></h2>
+                    <p id="lightbox-description" class="text-gray-600 leading-relaxed"></p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center space-x-4">
+                            <button onclick="sharePhoto()"
+                                    class="flex items-center space-x-2 text-battery-blue hover:text-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-200 rounded px-3 py-2">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share</span>
+                            </button>
+                            <button onclick="downloadPhoto()"
+                                    class="flex items-center space-x-2 text-battery-blue hover:text-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-200 rounded px-3 py-2">
+                                <i class="fas fa-download"></i>
+                                <span>Download</span>
+                            </button>
+                        </div>
+                        <span id="photo-counter" class="text-sm text-gray-500"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Gallery Functionality -->
+    <script>
+        // Gallery State Management
+        let currentPhotoIndex = 0;
+        let currentFilter = 'all';
+        let allPhotos = [];
+        let filteredPhotos = [];
+        let isLoading = false;
+
+        // Photo Data (In a real application, this would come from an API)
+        const photoData = [
+            {
+                id: 1,
+                src: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=Professional+Installation',
+                title: 'Professional Battery Installation',
+                description: 'Expert technician installing a premium car battery with proper safety protocols and quality assurance.',
+                category: 'installation',
+                alt: 'Professional battery installation service'
+            },
+            {
+                id: 2,
+                src: 'https://via.placeholder.com/600x500/1e40af/ffffff?text=Mobile+Service',
+                title: 'Mobile Battery Service',
+                description: 'Our mobile service team providing on-site battery replacement for maximum customer convenience.',
+                category: 'installation',
+                alt: 'Mobile battery service truck'
+            },
+            {
+                id: 3,
+                src: 'https://via.placeholder.com/600x400/059669/ffffff?text=Modern+Workshop',
+                title: 'Modern Workshop Facility',
+                description: 'State-of-the-art workshop equipped with latest battery testing and diagnostic equipment.',
+                category: 'facilities',
+                alt: 'Modern battery workshop facility'
+            },
+            {
+                id: 4,
+                src: 'https://via.placeholder.com/600x600/dc2626/ffffff?text=Ambulance+Service',
+                title: 'Emergency Vehicle Service',
+                description: 'Installing critical batteries in emergency vehicles with priority service support during business hours.',
+                category: 'emergency',
+                alt: 'Emergency vehicle battery service'
+            },
+            {
+                id: 5,
+                src: 'https://via.placeholder.com/600x400/f59e0b/ffffff?text=Happy+Customer',
+                title: 'Satisfied Customer',
+                description: 'Customer testimonial showcasing our exceptional service quality and customer satisfaction.',
+                category: 'testimonials',
+                alt: 'Satisfied customer testimonial'
+            },
+            {
+                id: 6,
+                src: 'https://via.placeholder.com/600x400/1e40af/ffffff?text=Premium+Batteries',
+                title: 'Premium Battery Range',
+                description: 'Our comprehensive collection of premium batteries with extended warranties and reliability.',
+                category: 'products',
+                alt: 'Premium battery products range'
+            }
+        ];
+
+        // Initialize Gallery
+        document.addEventListener('DOMContentLoaded', function() {
+            allPhotos = [...photoData];
+            filteredPhotos = [...allPhotos];
+            setupFilterListeners();
+            setupKeyboardNavigation();
+            setupLazyLoading();
+        });
+
+        // Filter Functionality
+        function setupFilterListeners() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    setActiveFilter(btn, filter);
+                    filterPhotos(filter);
+                });
+            });
+        }
+
+        function setActiveFilter(activeBtn, filter) {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active', 'bg-battery-blue', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+            });
+
+            activeBtn.classList.add('active', 'bg-battery-blue', 'text-white');
+            activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+
+            currentFilter = filter;
+        }
+
+        function filterPhotos(filter) {
+            const photoItems = document.querySelectorAll('.photo-item');
+
+            // Show loading animation
+            showLoadingSkeletons();
+
+            setTimeout(() => {
+                if (filter === 'all') {
+                    filteredPhotos = [...allPhotos];
+                    photoItems.forEach(item => {
+                        item.style.display = 'block';
+                        item.classList.add('animate-fade-in');
+                    });
+                } else {
+                    filteredPhotos = allPhotos.filter(photo => photo.category === filter);
+                    photoItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (category === filter) {
+                            item.style.display = 'block';
+                            item.classList.add('animate-fade-in');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+
+                hideLoadingSkeletons();
+
+                // Update photo counter if lightbox is open
+                if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+                    updatePhotoCounter();
+                }
+            }, 300);
+        }
+
+        // Loading Skeleton Animation
+        function showLoadingSkeletons() {
+            const gallery = document.getElementById('photo-gallery');
+            const template = document.getElementById('photo-skeleton-template');
+
+            // Add loading skeletons
+            for (let i = 0; i < 3; i++) {
+                const skeleton = template.cloneNode(true);
+                skeleton.id = `skeleton-${i}`;
+                skeleton.classList.remove('hidden');
+                skeleton.classList.add('photo-skeleton-active');
+                gallery.appendChild(skeleton);
+            }
+        }
+
+        function hideLoadingSkeletons() {
+            const skeletons = document.querySelectorAll('.photo-skeleton-active');
+            skeletons.forEach(skeleton => skeleton.remove());
+        }
+
+        // Lightbox Functionality
+        function openLightbox(src, title, description) {
+            const modal = document.getElementById('lightbox-modal');
+            const image = document.getElementById('lightbox-image');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-description');
+
+            // Find current photo index in filtered photos
+            currentPhotoIndex = filteredPhotos.findIndex(photo => photo.src === src);
+
+            image.src = src;
+            image.alt = title;
+            titleEl.textContent = title;
+            descEl.textContent = description;
+
+            updatePhotoCounter();
+            updateNavigationButtons();
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Focus management for accessibility
+            modal.focus();
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function nextPhoto() {
+            if (currentPhotoIndex < filteredPhotos.length - 1) {
+                currentPhotoIndex++;
+                updateLightboxContent();
+            }
+        }
+
+        function previousPhoto() {
+            if (currentPhotoIndex > 0) {
+                currentPhotoIndex--;
+                updateLightboxContent();
+            }
+        }
+
+        function updateLightboxContent() {
+            const photo = filteredPhotos[currentPhotoIndex];
+            const image = document.getElementById('lightbox-image');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-description');
+
+            image.src = photo.src;
+            image.alt = photo.title;
+            titleEl.textContent = photo.title;
+            descEl.textContent = photo.description;
+
+            updatePhotoCounter();
+            updateNavigationButtons();
+        }
+
+        function updatePhotoCounter() {
+            const counter = document.getElementById('photo-counter');
+            counter.textContent = `${currentPhotoIndex + 1} of ${filteredPhotos.length}`;
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            prevBtn.style.opacity = currentPhotoIndex === 0 ? '0.3' : '1';
+            nextBtn.style.opacity = currentPhotoIndex === filteredPhotos.length - 1 ? '0.3' : '1';
+        }
+
+        // Keyboard Navigation
+        function setupKeyboardNavigation() {
+            document.addEventListener('keydown', (e) => {
+                const modal = document.getElementById('lightbox-modal');
+                if (!modal.classList.contains('hidden')) {
+                    switch(e.key) {
+                        case 'ArrowLeft':
+                            e.preventDefault();
+                            previousPhoto();
+                            break;
+                        case 'ArrowRight':
+                            e.preventDefault();
+                            nextPhoto();
+                            break;
+                        case 'Escape':
+                            e.preventDefault();
+                            closeLightbox();
+                            break;
+                    }
+                }
+            });
+        }
+
+        // Lazy Loading
+        function setupLazyLoading() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                images.forEach(img => imageObserver.observe(img));
+            }
+        }
+
+        // Share Functionality
+        function sharePhoto() {
+            const photo = filteredPhotos[currentPhotoIndex];
+            if (navigator.share) {
+                navigator.share({
+                    title: photo.title,
+                    text: photo.description,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers without Web Share API
+                const shareUrl = window.location.href;
+                navigator.clipboard.writeText(shareUrl);
+                showToast('Photo link copied to clipboard!');
+            }
+        }
+
+        // Download Functionality
+        function downloadPhoto() {
+            const photo = filteredPhotos[currentPhotoIndex];
+            const link = document.createElement('a');
+            link.href = photo.src;
+            link.download = `${photo.title.replace(/\s+/g, '_')}.jpg`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('Photo downloaded!');
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-4 right-4 bg-battery-blue text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-slide-up';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('animate-fade-in');
+                document.body.removeChild(toast);
+            }, 3000);
+        }
+
+        // Load More Functionality
+        document.getElementById('load-more-btn').addEventListener('click', function() {
+            if (isLoading) return;
+
+            isLoading = true;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+            this.disabled = true;
+
+            // Simulate loading delay
+            setTimeout(() => {
+                // In a real application, you would fetch more photos from an API
+                showToast('All photos loaded!');
+
+                this.innerHTML = '<i class="fas fa-check mr-2"></i>All Photos Loaded';
+                this.classList.add('bg-battery-green');
+                this.classList.remove('bg-battery-blue');
+
+                setTimeout(() => {
+                    this.style.display = 'none';
+                }, 2000);
+
+                isLoading = false;
+            }, 1500);
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - img "Batteries Plus Logo" [ref=e6]
+      - text: 
+      - button "" [ref=e8] [cursor=pointer]:
+        - generic [ref=e9] [cursor=pointer]: 
+  - generic [ref=e13]:
+    - heading "Professional Battery Services" [level=2] [ref=e14]:
+      - text: Professional Battery
+      - generic [ref=e15]: Services
+    - paragraph [ref=e16]: Comprehensive battery solutions across NSW - From testing and installation to fleet management and emergency assistance. Expert service you can trust.
+    - generic [ref=e17]:
+      - button " Get Free Quote" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19] [cursor=pointer]: 
+        - text: Get Free Quote
+      - link " Emergency Service" [ref=e20] [cursor=pointer]:
+        - /url: tel:1300088552
+        - generic [ref=e21] [cursor=pointer]: 
+        - text: Emergency Service
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: 
+        - generic [ref=e25]: 8AM-5PM Service
+      - generic [ref=e26]:
+        - generic [ref=e27]: 
+        - generic [ref=e28]: Licensed & Insured
+      - generic [ref=e29]:
+        - generic [ref=e30]: 
+        - generic [ref=e31]: 15+ Years Experience
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - heading "Our Complete Service Range" [level=3] [ref=e35]
+      - paragraph [ref=e37]: From basic testing to comprehensive fleet management, we provide all the battery services you need with expert installation and reliable support across NSW.
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - img "Battery testing and diagnostic service" [ref=e41]
+          - generic [ref=e43]: 
+        - heading "Battery Testing & Diagnostics" [level=4] [ref=e44]
+        - paragraph [ref=e45]: Professional battery health assessment using advanced diagnostic equipment to determine battery condition and performance.
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - generic [ref=e48]: 
+            - text: Comprehensive load testing
+          - listitem [ref=e49]:
+            - generic [ref=e50]: 
+            - text: FREE Testing Available
+          - listitem [ref=e51]:
+            - generic [ref=e52]: 
+            - text: Detailed diagnostic report
+        - button "Learn More" [ref=e53] [cursor=pointer]
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - img "Mobile battery installation service" [ref=e56]
+          - generic [ref=e58]: 
+        - heading "Mobile Installation Service" [level=4] [ref=e59]
+        - paragraph [ref=e60]: We come to you! Professional battery installation at your location across metro and regional NSW.
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - generic [ref=e63]: 
+            - text: Home or office installation
+          - listitem [ref=e64]:
+            - generic [ref=e65]: 
+            - text: Same-day availability
+          - listitem [ref=e66]:
+            - generic [ref=e67]: 
+            - text: All NSW coverage
+        - button "Learn More" [ref=e68] [cursor=pointer]
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - img "Fleet management battery solutions" [ref=e71]
+          - generic [ref=e73]: 
+        - heading "Fleet Management Solutions" [level=4] [ref=e74]
+        - paragraph [ref=e75]: Comprehensive battery management programs designed for commercial fleets and business vehicles.
+        - list [ref=e76]:
+          - listitem [ref=e77]:
+            - generic [ref=e78]: 
+            - text: Volume discounts available
+          - listitem [ref=e79]:
+            - generic [ref=e80]: 
+            - text: Fleet-wide tracking
+          - listitem [ref=e81]:
+            - generic [ref=e82]: 
+            - text: Performance reporting
+        - button "Learn More" [ref=e83] [cursor=pointer]
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - img "Emergency roadside battery assistance" [ref=e86]
+          - generic [ref=e88]: 
+        - heading "Emergency Roadside Assistance" [level=4] [ref=e89]
+        - paragraph [ref=e90]: Emergency battery replacement and jump-start services across NSW. Available 8AM-5PM, after hours can be sorted.
+        - list [ref=e91]:
+          - listitem [ref=e92]:
+            - generic [ref=e93]: 
+            - text: 8AM-5PM availability
+          - listitem [ref=e94]:
+            - generic [ref=e95]: 
+            - text: 30-min response metro
+          - listitem [ref=e96]:
+            - generic [ref=e97]: 
+            - text: Emergency priority
+        - button "Learn More" [ref=e98] [cursor=pointer]
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - img "Battery maintenance and service programs" [ref=e101]
+          - generic [ref=e103]: 
+        - heading "Battery Maintenance Programs" [level=4] [ref=e104]
+        - paragraph [ref=e105]: Scheduled maintenance services to extend battery life and prevent unexpected failures.
+        - list [ref=e106]:
+          - listitem [ref=e107]:
+            - generic [ref=e108]: 
+            - text: Regular health checks
+          - listitem [ref=e109]:
+            - generic [ref=e110]: 
+            - text: Flexible scheduling
+          - listitem [ref=e111]:
+            - generic [ref=e112]: 
+            - text: Preventive alerts
+        - button "Learn More" [ref=e113] [cursor=pointer]
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - img "Warranty and insurance battery claims" [ref=e116]
+          - generic [ref=e118]: 
+        - heading "Warranty & Insurance Claims" [level=4] [ref=e119]
+        - paragraph [ref=e120]: Expert assistance with battery warranty claims and insurance paperwork for hassle-free coverage.
+        - list [ref=e121]:
+          - listitem [ref=e122]:
+            - generic [ref=e123]: 
+            - text: No-hassle claims process
+          - listitem [ref=e124]:
+            - generic [ref=e125]: 
+            - text: Insurance documentation
+          - listitem [ref=e126]:
+            - generic [ref=e127]: 
+            - text: Follow-up support
+        - button "Learn More" [ref=e128] [cursor=pointer]
+  - generic [ref=e130]:
+    - generic [ref=e131]:
+      - heading "Why Choose Batteries Plus NSW?" [level=3] [ref=e132]
+      - paragraph [ref=e134]: Over 15 years of powering NSW with reliable battery solutions and expert service
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - generic [ref=e138]: 
+        - heading "Expert Technicians" [level=4] [ref=e139]
+        - paragraph [ref=e140]: Our certified technicians have decades of combined experience and stay updated with the latest battery technology and service techniques.
+      - generic [ref=e141]:
+        - generic [ref=e143]: 
+        - heading "Fast Response" [level=4] [ref=e144]
+        - paragraph [ref=e145]: Emergency service within 30 minutes in metro areas. Same-day service available across NSW for all battery needs.
+      - generic [ref=e146]:
+        - generic [ref=e148]: 
+        - heading "Quality Guarantee" [level=4] [ref=e149]
+        - paragraph [ref=e150]: All services come with our satisfaction guarantee. Professional installation and no questions asked warranty support.
+    - generic [ref=e151]:
+      - img "High-end vehicle maintenance facility" [ref=e153]
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 15,000+
+          - generic [ref=e157]: Services Completed
+        - generic [ref=e158]:
+          - generic [ref=e159]: 98%
+          - generic [ref=e160]: Customer Satisfaction
+        - generic [ref=e161]:
+          - generic [ref=e162]: 8-5
+          - generic [ref=e163]: Emergency Service
+        - generic [ref=e164]:
+          - generic [ref=e165]: 15+
+          - generic [ref=e166]: Years Experience
+  - generic [ref=e170]:
+    - heading "Service Coverage Areas" [level=3] [ref=e171]
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - heading " Metro Areas (30-minute response)" [level=4] [ref=e175]:
+          - generic [ref=e176]: 
+          - text: Metro Areas (30-minute response)
+        - generic [ref=e177]:
+          - list [ref=e178]:
+            - listitem [ref=e179]: • Sydney CBD
+            - listitem [ref=e180]: • North Shore
+            - listitem [ref=e181]: • Eastern Suburbs
+            - listitem [ref=e182]: • Inner West
+            - listitem [ref=e183]: • South West
+          - list [ref=e184]:
+            - listitem [ref=e185]: • Western Sydney
+            - listitem [ref=e186]: • Northern Beaches
+            - listitem [ref=e187]: • Sutherland Shire
+            - listitem [ref=e188]: • Parramatta
+            - listitem [ref=e189]: • Penrith
+      - generic [ref=e190]:
+        - heading " Regional NSW (Same-day service)" [level=4] [ref=e191]:
+          - generic [ref=e192]: 
+          - text: Regional NSW (Same-day service)
+        - generic [ref=e193]:
+          - list [ref=e194]:
+            - listitem [ref=e195]: • Newcastle
+            - listitem [ref=e196]: • Wollongong
+            - listitem [ref=e197]: • Central Coast
+            - listitem [ref=e198]: • Blue Mountains
+          - list [ref=e199]:
+            - listitem [ref=e200]: • Hunter Valley
+            - listitem [ref=e201]: • South Coast
+            - listitem [ref=e202]: • Western NSW
+            - listitem [ref=e203]: • North Coast
+      - paragraph [ref=e205]:
+        - generic [ref=e206]: 
+        - text: Don't see your area? Call us! We service all of NSW and can arrange special coverage.
+  - generic [ref=e209]:
+    - generic [ref=e210]:
+      - heading "Book Your Service" [level=3] [ref=e211]
+      - paragraph [ref=e213]: Schedule your battery service online or call us for immediate assistance
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - generic [ref=e217]:
+            - generic [ref=e218]: Full Name *
+            - textbox [ref=e219]
+          - generic [ref=e220]:
+            - generic [ref=e221]: Phone Number *
+            - textbox [ref=e222]
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - generic [ref=e225]: Email Address *
+            - textbox [ref=e226]
+          - generic [ref=e227]:
+            - generic [ref=e228]: Preferred Service Date
+            - textbox [ref=e229]
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - generic [ref=e232]: Service Type *
+            - combobox [ref=e233]:
+              - option "Select a service" [selected]
+              - option "Battery Testing & Diagnostics"
+              - option "Mobile Installation"
+              - option "Emergency Roadside Assistance"
+              - option "Battery Maintenance"
+              - option "Fleet Management"
+              - option "Warranty/Insurance Claim"
+          - generic [ref=e234]:
+            - generic [ref=e235]: Vehicle Type
+            - combobox [ref=e236]:
+              - option "Select vehicle type" [selected]
+              - option "Car/SUV"
+              - option "Truck/Commercial"
+              - option "Marine/Boat"
+              - option "Emergency Vehicle"
+              - option "Motorcycle"
+              - option "Other"
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - generic [ref=e239]: Vehicle Make & Model
+            - textbox "e.g., Toyota Camry 2020" [ref=e240]
+          - generic [ref=e241]:
+            - generic [ref=e242]: Service Location
+            - textbox "Suburb or address" [ref=e243]
+        - generic [ref=e244]:
+          - generic [ref=e245]: Additional Details
+          - textbox "Any specific requirements or issues you'd like us to know about..." [ref=e246]
+        - generic [ref=e248]:
+          - checkbox " This is an emergency (priority service required)" [ref=e249]
+          - generic [ref=e250]:
+            - generic [ref=e251]: 
+            - text: This is an emergency (priority service required)
+        - generic [ref=e252]:
+          - button " Book Service" [ref=e253] [cursor=pointer]:
+            - generic [ref=e254] [cursor=pointer]: 
+            - text: Book Service
+          - link " Call Now" [ref=e255] [cursor=pointer]:
+            - /url: tel:1300088552
+            - generic [ref=e256] [cursor=pointer]: 
+            - text: Call Now
+      - generic [ref=e257]:
+        - generic [ref=e258]: 
+        - text: Your information is secure and will only be used to provide your requested service
+  - generic [ref=e260]:
+    - generic [ref=e261]:
+      - heading "What Our Customers Say" [level=3] [ref=e262]
+      - paragraph [ref=e264]: Real experiences from satisfied customers across NSW who trust our professional battery services
+    - generic [ref=e265]:
+      - generic [ref=e266]:
+        - generic [ref=e267]:
+          - generic [ref=e268]:
+            - generic [ref=e269]: 
+            - generic [ref=e270]: 
+            - generic [ref=e271]: 
+            - generic [ref=e272]: 
+            - generic [ref=e273]: 
+          - generic [ref=e274]: 2 years ago
+        - heading "Mike Thompson" [level=4] [ref=e275]
+        - paragraph [ref=e276]: "\"Outstanding emergency service! My truck battery died at 2 AM on the highway, and they had me back on the road within an hour. Professional, fast, and fairly priced.\""
+        - generic [ref=e277]:
+          - generic [ref=e278]: 
+          - text: Commercial Driver • Sydney
+      - generic [ref=e279]:
+        - generic [ref=e280]:
+          - generic [ref=e281]:
+            - generic [ref=e282]: 
+            - generic [ref=e283]: 
+            - generic [ref=e284]: 
+            - generic [ref=e285]: 
+            - generic [ref=e286]: 
+          - generic [ref=e287]: 1 year ago
+        - heading "Sarah Chen" [level=4] [ref=e288]
+        - paragraph [ref=e289]: "\"We've been using Batteries Plus NSW for our entire fleet of 25 vehicles for 3 years. Their maintenance program has reduced our battery-related breakdowns by 80%. Highly recommended!\""
+        - generic [ref=e290]:
+          - generic [ref=e291]: 
+          - text: Fleet Manager • Newcastle
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - generic [ref=e294]:
+            - generic [ref=e295]: 
+            - generic [ref=e296]: 
+            - generic [ref=e297]: 
+            - generic [ref=e298]: 
+            - generic [ref=e299]: 
+          - generic [ref=e300]: 1 year ago
+        - heading "James Wilson" [level=4] [ref=e301]
+        - paragraph [ref=e302]: "\"The mobile service is fantastic! They came to my office, tested my car battery, and installed a new one while I continued working. No disruption to my day whatsoever.\""
+        - generic [ref=e303]:
+          - generic [ref=e304]: 
+          - text: Business Owner • Parramatta
+      - generic [ref=e305]:
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - generic [ref=e308]: 
+            - generic [ref=e309]: 
+            - generic [ref=e310]: 
+            - generic [ref=e311]: 
+            - generic [ref=e312]: 
+          - generic [ref=e313]: 5/5
+        - paragraph [ref=e314]: "\"As a paramedic, reliable batteries are crucial. Their emergency vehicle service is impeccable - they understand the importance of our equipment and provide priority support during business hours with after-hours arrangements available.\""
+        - generic [ref=e315]:
+          - generic [ref=e316]: L
+          - generic [ref=e317]:
+            - paragraph [ref=e318]: Lisa Rodriguez
+            - paragraph [ref=e319]: Paramedic, Wollongong
+      - generic [ref=e320]:
+        - generic [ref=e321]:
+          - generic [ref=e322]:
+            - generic [ref=e323]: 
+            - generic [ref=e324]: 
+            - generic [ref=e325]: 
+            - generic [ref=e326]: 
+            - generic [ref=e327]: 
+          - generic [ref=e328]: 5/5
+        - paragraph [ref=e329]: "\"Great experience with their marine battery service. They delivered and installed a new deep-cycle battery at the marina. The technician was knowledgeable about marine applications.\""
+        - generic [ref=e330]:
+          - generic [ref=e331]: R
+          - generic [ref=e332]:
+            - paragraph [ref=e333]: Robert Kim
+            - paragraph [ref=e334]: Boat Owner, Central Coast
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e338]: 
+            - generic [ref=e339]: 
+            - generic [ref=e340]: 
+            - generic [ref=e341]: 
+            - generic [ref=e342]: 
+          - generic [ref=e343]: 5/5
+        - paragraph [ref=e344]: "\"Their warranty claim service was exceptional. When my battery failed after 18 months, they handled everything with the manufacturer and replaced it at no cost. Stress-free process!\""
+        - generic [ref=e345]:
+          - generic [ref=e346]: A
+          - generic [ref=e347]:
+            - paragraph [ref=e348]: Amanda Foster
+            - paragraph [ref=e349]: Teacher, Blue Mountains
+    - generic [ref=e351]:
+      - generic [ref=e352]: "4.8"
+      - generic [ref=e353]:
+        - generic [ref=e354]: 
+        - generic [ref=e355]: 
+        - generic [ref=e356]: 
+        - generic [ref=e357]: 
+        - generic [ref=e358]: 
+      - paragraph [ref=e359]: Average Rating
+      - paragraph [ref=e360]: Based on 1,200+ Reviews
+      - link "View All Reviews" [ref=e362] [cursor=pointer]:
+        - /url: "#"
+  - generic [ref=e363]:
+    - img "Emergency vehicle battery service" [ref=e365]
+    - generic [ref=e368]:
+      - heading " Emergency Battery Service" [level=3] [ref=e369]:
+        - generic [ref=e370]: 
+        - text: Emergency Battery Service
+      - paragraph [ref=e371]: Dead battery? Don't get stranded! Our response team is available 8AM-5PM across NSW. After hours can be sorted. Fast, professional service when you need it most.
+      - generic [ref=e372]:
+        - 'link " Call Now: 0439 222 665" [ref=e373] [cursor=pointer]':
+          - /url: tel:1300088552
+          - generic [ref=e374] [cursor=pointer]: 
+          - text: "Call Now: 0439 222 665"
+        - button " Find Nearest Location" [ref=e375] [cursor=pointer]:
+          - generic [ref=e376] [cursor=pointer]: 
+          - text: Find Nearest Location
+  - generic [ref=e379]:
+    - heading "Get Your Free Service Quote Today" [level=3] [ref=e380]
+    - paragraph [ref=e381]: Quick online quote in under 2 minutes. Compare services and find the perfect solution for your needs.
+    - generic [ref=e382]:
+      - textbox "Your Name" [ref=e383]
+      - textbox "Phone Number" [ref=e384]
+      - textbox "Vehicle Make & Model" [ref=e385]
+      - combobox [ref=e386]:
+        - option "Select Service Type" [selected]
+        - option "Battery Testing"
+        - option "Mobile Installation"
+        - option "Emergency Service"
+        - option "Fleet Management"
+    - button " Get My Quote" [ref=e387] [cursor=pointer]:
+      - generic [ref=e388] [cursor=pointer]: 
+      - text: Get My Quote
+    - paragraph [ref=e389]:
+      - generic [ref=e390]: 
+      - text: Your information is secure and will never be shared
+  - contentinfo [ref=e391]:
+    - generic [ref=e392]:
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - img "Batteries Plus Logo" [ref=e396]
+          - paragraph [ref=e397]: NSW's most trusted battery specialists, providing professional battery services and replacement for over 15 years.
+          - generic [ref=e398]:
+            - link "" [ref=e399] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e400] [cursor=pointer]: 
+            - link "" [ref=e401] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e402] [cursor=pointer]: 
+            - link "" [ref=e403] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e404] [cursor=pointer]: 
+        - generic [ref=e405]:
+          - heading "Quick Links" [level=5] [ref=e406]
+          - list [ref=e407]:
+            - listitem [ref=e408]:
+              - link "Car Batteries" [ref=e409] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e410]:
+              - link "Truck Batteries" [ref=e411] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e412]:
+              - link "Marine Batteries" [ref=e413] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e414]:
+              - link "Emergency Service" [ref=e415] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e416]:
+              - link "About Us" [ref=e417] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e418]:
+          - heading "Services" [level=5] [ref=e419]
+          - list [ref=e420]:
+            - listitem [ref=e421]:
+              - link "Battery Testing" [ref=e422] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e423]:
+              - link "Installation" [ref=e424] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e425]:
+              - link "Mobile Service" [ref=e426] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e427]:
+              - link "Fleet Services" [ref=e428] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e429]:
+              - link "Recycling" [ref=e430] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e431]:
+          - heading "Contact Us" [level=5] [ref=e432]
+          - generic [ref=e433]:
+            - generic [ref=e434]:
+              - generic [ref=e435]: 
+              - generic [ref=e436]: 1300 088 552
+            - generic [ref=e437]:
+              - generic [ref=e438]: 
+              - generic [ref=e439]: info@batteriesplusnsw.com.au
+            - generic [ref=e440]:
+              - generic [ref=e441]: 
+              - generic [ref=e442]:
+                - text: Multiple locations across NSW
+                - text: Mobile service available
+            - generic [ref=e443]:
+              - generic [ref=e444]: 
+              - generic [ref=e445]:
+                - text: 8AM-5PM Service
+                - text: After hours available
+      - paragraph [ref=e447]:
+        - text: © 2024 Batteries Plus NSW. All rights reserved. |
+        - link "Privacy Policy" [ref=e448] [cursor=pointer]:
+          - /url: "#"
+        - text: "|"
+        - link "Terms of Service" [ref=e449] [cursor=pointer]:
+          - /url: "#"
+```

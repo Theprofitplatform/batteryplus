@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Integration Examples - Batteries Plus NSW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/photo-integration.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#1e40af',
+                        'battery-green': '#059669',
+                        'battery-yellow': '#f59e0b',
+                        'battery-red': '#dc2626',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-battery-full text-battery-blue text-3xl mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-900">Batteries Plus NSW</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#homepage" class="text-gray-700 hover:text-battery-blue">Homepage Integration</a>
+                    <a href="#services" class="text-gray-700 hover:text-battery-blue">Services</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-battery-blue">Testimonials</a>
+                    <a href="#products" class="text-gray-700 hover:text-battery-blue">Products</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-battery-blue to-blue-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Photo Integration Examples</h1>
+            <p class="text-xl">Practical examples of integrating photo galleries into existing website sections</p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 1. Homepage Hero Section Enhancement -->
+        <section id="homepage">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Homepage Hero Section Enhancement</h2>
+
+            <!-- Enhanced Hero Section -->
+            <div class="relative bg-gradient-to-r from-battery-blue to-blue-800 text-white rounded-2xl overflow-hidden">
+                <!-- Background Photos -->
+                <div class="hero-photo-showcase">
+                    <img src="https://via.placeholder.com/1200x600/1e40af/ffffff?text=Professional+Battery+Installation"
+                         alt="Professional battery installation background"
+                         class="w-full h-full object-cover opacity-20">
+                </div>
+
+                <!-- Hero Content -->
+                <div class="relative z-10 py-20 px-8 text-center">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-6">
+                        NSW's Most Trusted
+                        <span class="text-battery-yellow">Battery Specialists</span>
+                    </h3>
+                    <p class="text-xl mb-8">
+                        Fast, reliable battery replacement and service for cars, trucks, marine vessels, and emergency vehicles
+                    </p>
+
+                    <!-- Photo Showcase Strip -->
+                    <div class="flex justify-center space-x-4 mb-8 overflow-x-auto pb-4">
+                        <div class="photo-card-compact w-24 h-16 flex-shrink-0">
+                            <img src="https://via.placeholder.com/100x70/f59e0b/ffffff?text=Car"
+                                 alt="Car battery service"
+                                 class="w-full h-full object-cover rounded-lg border-2 border-white/30">
+                        </div>
+                        <div class="photo-card-compact w-24 h-16 flex-shrink-0">
+                            <img src="https://via.placeholder.com/100x70/059669/ffffff?text=Truck"
+                                 alt="Truck battery service"
+                                 class="w-full h-full object-cover rounded-lg border-2 border-white/30">
+                        </div>
+                        <div class="photo-card-compact w-24 h-16 flex-shrink-0">
+                            <img src="https://via.placeholder.com/100x70/dc2626/ffffff?text=Emergency"
+                                 alt="Emergency vehicle service"
+                                 class="w-full h-full object-cover rounded-lg border-2 border-white/30">
+                        </div>
+                        <div class="photo-card-compact w-24 h-16 flex-shrink-0">
+                            <img src="https://via.placeholder.com/100x70/1e40af/ffffff?text=Marine"
+                                 alt="Marine battery service"
+                                 class="w-full h-full object-cover rounded-lg border-2 border-white/30">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-battery-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition duration-300">
+                            View Our Work Gallery
+                        </button>
+                        <button class="bg-battery-red text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-red-700 transition duration-300">
+                            Emergency Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Services Section with Photo Integration -->
+        <section id="services">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Services Section with Photo Integration</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Car Batteries with Photo -->
+                <div class="service-card with-photo bg-white rounded-xl p-8 text-center hover:shadow-lg transition duration-300 group relative overflow-hidden">
+                    <!-- Background Photo -->
+                    <div class="photo-background">
+                        <img src="https://via.placeholder.com/200x300/1e40af/ffffff?text=Car+Battery"
+                             alt="Car battery installation"
+                             class="w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+
+                    <!-- Service Content -->
+                    <div class="relative z-10">
+                        <div class="bg-battery-blue rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-car text-3xl text-white"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Car Batteries</h4>
+                        <p class="text-gray-600 mb-6">
+                            Premium automotive batteries for all makes and models
+                        </p>
+
+                        <!-- Mini Photo Gallery -->
+                        <div class="flex justify-center space-x-2 mb-6">
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/1e40af/ffffff?text=1"
+                                     alt="Car battery example 1"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/1e40af/ffffff?text=2"
+                                     alt="Car battery example 2"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/1e40af/ffffff?text=3"
+                                     alt="Car battery example 3"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-battery-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Emergency Services with Photo -->
+                <div class="service-card with-photo bg-white rounded-xl p-8 text-center hover:shadow-lg transition duration-300 group relative overflow-hidden">
+                    <div class="photo-background">
+                        <img src="https://via.placeholder.com/200x300/dc2626/ffffff?text=Emergency"
+                             alt="Emergency vehicle service"
+                             class="w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="bg-battery-red rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-ambulance text-3xl text-white"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Emergency Vehicles</h4>
+                        <p class="text-gray-600 mb-6">
+                            Critical power for ambulances and fire trucks
+                        </p>
+
+                        <div class="flex justify-center space-x-2 mb-6">
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/dc2626/ffffff?text=A"
+                                     alt="Ambulance battery service"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/dc2626/ffffff?text=F"
+                                     alt="Fire truck battery service"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/dc2626/ffffff?text=P"
+                                     alt="Police vehicle battery service"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-battery-red text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Facilities with Photo -->
+                <div class="service-card with-photo bg-white rounded-xl p-8 text-center hover:shadow-lg transition duration-300 group relative overflow-hidden">
+                    <div class="photo-background">
+                        <img src="https://via.placeholder.com/200x300/059669/ffffff?text=Workshop"
+                             alt="Modern workshop facility"
+                             class="w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="bg-battery-green rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-building text-3xl text-white"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Modern Facilities</h4>
+                        <p class="text-gray-600 mb-6">
+                            State-of-the-art testing and installation equipment
+                        </p>
+
+                        <div class="flex justify-center space-x-2 mb-6">
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/059669/ffffff?text=W"
+                                     alt="Workshop equipment"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/059669/ffffff?text=T"
+                                     alt="Testing equipment"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/059669/ffffff?text=S"
+                                     alt="Service bay"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-battery-green text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+                            Virtual Tour
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Service with Photo -->
+                <div class="service-card with-photo bg-white rounded-xl p-8 text-center hover:shadow-lg transition duration-300 group relative overflow-hidden">
+                    <div class="photo-background">
+                        <img src="https://via.placeholder.com/200x300/f59e0b/ffffff?text=Mobile"
+                             alt="Mobile service van"
+                             class="w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="bg-battery-yellow rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-truck text-3xl text-gray-800"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Mobile Service</h4>
+                        <p class="text-gray-600 mb-6">
+                            We come to your location for convenience
+                        </p>
+
+                        <div class="flex justify-center space-x-2 mb-6">
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/f59e0b/ffffff?text=V"
+                                     alt="Service van"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/f59e0b/ffffff?text=E"
+                                     alt="Equipment"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-8 h-8 rounded bg-gray-200 overflow-hidden">
+                                <img src="https://via.placeholder.com/50x50/f59e0b/ffffff?text=T"
+                                     alt="Technician"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-battery-yellow text-gray-800 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition duration-300">
+                            Book Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Customer Testimonials with Photos -->
+        <section id="testimonials">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Customer Testimonials with Photos</h2>
+
+            <div class="photo-grid-testimonials">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-with-photo">
+                    <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Happy+Customer+Car"
+                         alt="Satisfied customer with newly serviced car"
+                         class="testimonial-photo">
+
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <blockquote class="testimonial-quote">
+                            "Outstanding service! They replaced my car battery in just 15 minutes and even tested my alternator for free. The technician was professional and explained everything clearly."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user text-gray-800"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sarah Mitchell</p>
+                                <p class="text-sm text-gray-300">Sydney, NSW • Car Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-with-photo">
+                    <img src="https://via.placeholder.com/600x400/059669/ffffff?text=Fleet+Manager"
+                         alt="Fleet manager with emergency vehicles"
+                         class="testimonial-photo">
+
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <blockquote class="testimonial-quote">
+                            "Batteries Plus NSW has been maintaining our entire fleet of emergency vehicles for 3 years. Their reliability and service during business hours with after-hours support is critical for our operations."
+                        </blockquote>
+
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user-tie text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Michael Chen</p>
+                                <p class="text-sm text-gray-300">Fleet Manager • NSW Ambulance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Photo Grid -->
+            <div class="mt-12">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">More Happy Customers</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/1e40af/ffffff?text=Customer+1"
+                             alt="Happy customer 1"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/059669/ffffff?text=Customer+2"
+                             alt="Happy customer 2"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/f59e0b/ffffff?text=Customer+3"
+                             alt="Happy customer 3"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/dc2626/ffffff?text=Customer+4"
+                             alt="Happy customer 4"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/1e40af/ffffff?text=Customer+5"
+                             alt="Happy customer 5"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150x150/059669/ffffff?text=Customer+6"
+                             alt="Happy customer 6"
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Product Showcase with Photo Gallery -->
+        <section id="products">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Product Showcase with Photo Gallery</h2>
+
+            <div class="photo-grid-products">
+                <!-- Premium Car Battery -->
+                <div class="product-card enhanced bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200/1e40af/ffffff?text=Premium+Car+Battery"
+                             alt="Premium car battery"
+                             class="product-photo">
+                        <div class="category-badge installation">
+                            <i class="fas fa-star mr-1"></i>Premium
+                        </div>
+                        <div class="absolute top-3 right-3">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">
+                                3 Year Warranty
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Premium Car Battery</h3>
+                        <p class="text-gray-600 text-sm mb-3">High-performance 12V battery</p>
+
+                        <!-- Product Thumbnails -->
+                        <div class="product-thumbnails">
+                            <div class="product-thumbnail active">
+                                <img src="https://via.placeholder.com/80x80/1e40af/ffffff?text=Front"
+                                     alt="Battery front view"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/1e40af/ffffff?text=Side"
+                                     alt="Battery side view"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/1e40af/ffffff?text=Label"
+                                     alt="Battery specifications"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-battery-blue">$180-$320</span>
+                            <button class="bg-battery-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Vehicle Battery -->
+                <div class="product-card enhanced bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200/dc2626/ffffff?text=Emergency+Battery"
+                             alt="Emergency vehicle battery"
+                             class="product-photo">
+                        <div class="category-badge emergency">
+                            <i class="fas fa-bolt mr-1"></i>Emergency
+                        </div>
+                        <div class="absolute top-3 right-3">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded-full text-xs">
+                                8AM-5PM Service
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Emergency Vehicle Battery</h3>
+                        <p class="text-gray-600 text-sm mb-3">Mission-critical reliability</p>
+
+                        <div class="product-thumbnails">
+                            <div class="product-thumbnail active">
+                                <img src="https://via.placeholder.com/80x80/dc2626/ffffff?text=Battery"
+                                     alt="Emergency battery"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/dc2626/ffffff?text=Install"
+                                     alt="Installation process"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/dc2626/ffffff?text=Vehicle"
+                                     alt="In emergency vehicle"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-battery-red">$350-$650</span>
+                            <button class="bg-battery-red text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marine Battery -->
+                <div class="product-card enhanced bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200/059669/ffffff?text=Marine+Battery"
+                             alt="Marine deep cycle battery"
+                             class="product-photo">
+                        <div class="category-badge facilities">
+                            <i class="fas fa-ship mr-1"></i>Marine
+                        </div>
+                        <div class="absolute top-3 right-3">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">
+                                Waterproof
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Marine Deep Cycle</h3>
+                        <p class="text-gray-600 text-sm mb-3">Corrosion-resistant design</p>
+
+                        <div class="product-thumbnails">
+                            <div class="product-thumbnail active">
+                                <img src="https://via.placeholder.com/80x80/059669/ffffff?text=Marine"
+                                     alt="Marine battery"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/059669/ffffff?text=Boat"
+                                     alt="Installed in boat"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/059669/ffffff?text=Test"
+                                     alt="Testing setup"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-battery-green">$220-$480</span>
+                            <button class="bg-battery-green text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Battery -->
+                <div class="product-card enhanced bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200/f59e0b/ffffff?text=Commercial+Battery"
+                             alt="Heavy duty commercial battery"
+                             class="product-photo">
+                        <div class="category-badge testimonials">
+                            <i class="fas fa-truck mr-1"></i>Commercial
+                        </div>
+                        <div class="absolute top-3 right-3">
+                            <span class="bg-purple-600 text-white px-2 py-1 rounded-full text-xs">
+                                Fleet Discount
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Heavy Duty Commercial</h3>
+                        <p class="text-gray-600 text-sm mb-3">For trucks and buses</p>
+
+                        <div class="product-thumbnails">
+                            <div class="product-thumbnail active">
+                                <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=Heavy"
+                                     alt="Heavy duty battery"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=Truck"
+                                     alt="In commercial truck"
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="product-thumbnail">
+                                <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=Tech"
+                                     alt="Technical specifications"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-xl font-bold text-battery-yellow">$380-$750</span>
+                            <button class="bg-battery-yellow text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors duration-200">
+                                Fleet Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading Skeleton (for dynamic content) -->
+                <div class="photo-skeleton">
+                    <div class="photo-skeleton-image">
+                        <div class="photo-shimmer"></div>
+                    </div>
+                    <div class="photo-skeleton-content">
+                        <div class="photo-skeleton-title"></div>
+                        <div class="photo-skeleton-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Call-to-Action with Photo Background -->
+        <section class="relative bg-gradient-to-r from-battery-blue to-blue-800 text-white rounded-2xl overflow-hidden">
+            <!-- Background Photo -->
+            <div class="absolute inset-0">
+                <img src="https://via.placeholder.com/1200x400/1e40af/ffffff?text=Professional+Team"
+                     alt="Professional battery service team"
+                     class="w-full h-full object-cover opacity-30">
+            </div>
+
+            <!-- CTA Content -->
+            <div class="relative z-10 py-16 px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Experience Professional Battery Service?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    See the difference quality makes. Browse our complete photo gallery and discover why NSW trusts us with their power needs.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-battery-blue px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-images mr-2"></i>View Full Gallery
+                    </button>
+                    <button class="bg-battery-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>Get Free Quote
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        // Product thumbnail switching
+        document.querySelectorAll('.product-thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const mainImage = productCard.querySelector('.product-photo');
+                const thumbnails = productCard.querySelectorAll('.product-thumbnail');
+
+                // Remove active class from all thumbnails
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+                // Add active class to clicked thumbnail
+                this.classList.add('active');
+
+                // Update main image
+                const newSrc = this.querySelector('img').src;
+                mainImage.src = newSrc;
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('photo-animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all photo cards
+        document.querySelectorAll('.photo-card, .service-card, .product-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>

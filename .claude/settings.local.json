@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Read(//mnt/c/Users/abhis/projects/battery/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

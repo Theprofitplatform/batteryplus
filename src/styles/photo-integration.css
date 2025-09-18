@@ -1,0 +1,483 @@
+/* Photo Integration Styles for Batteries Plus NSW */
+/* Enhances existing pages with photo gallery capabilities */
+
+/* ============================================
+   PHOTO GALLERY INTEGRATION STYLES
+   ============================================ */
+
+/* Base photo container styles */
+.photo-gallery-section {
+  @apply py-16 bg-white;
+}
+
+.photo-gallery-section.alternate {
+  @apply bg-gray-50;
+}
+
+/* Photo grid layouts for different page contexts */
+.photo-grid-homepage {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.photo-grid-services {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.photo-grid-testimonials {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.photo-grid-products {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4;
+}
+
+/* ============================================
+   PHOTO CARD COMPONENTS
+   ============================================ */
+
+/* Standard photo card for service galleries */
+.photo-card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer;
+  @apply transition-all duration-300 hover:shadow-2xl hover:scale-105;
+}
+
+.photo-card-compact {
+  @apply bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer;
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-102;
+}
+
+/* Photo overlay effects */
+.photo-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40;
+  @apply transition-all duration-300 flex items-center justify-center;
+}
+
+.photo-overlay-gradient {
+  @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent;
+}
+
+/* Photo content areas */
+.photo-content {
+  @apply absolute bottom-0 left-0 right-0 p-4 text-white;
+  @apply transform translate-y-2 group-hover:translate-y-0;
+  @apply transition-transform duration-300 opacity-90 group-hover:opacity-100;
+}
+
+.photo-meta {
+  @apply p-4 space-y-2;
+}
+
+/* ============================================
+   CATEGORY BADGES AND FILTERS
+   ============================================ */
+
+/* Category badge styles */
+.category-badge {
+  @apply absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.category-badge.installation {
+  @apply bg-blue-600 text-white;
+}
+
+.category-badge.facilities {
+  @apply bg-green-600 text-white;
+}
+
+.category-badge.emergency {
+  @apply bg-red-600 text-white;
+}
+
+.category-badge.testimonials {
+  @apply bg-yellow-500 text-gray-900;
+}
+
+.category-badge.products {
+  @apply bg-blue-600 text-white;
+}
+
+/* Filter button styles */
+.photo-filter {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+  @apply border border-gray-200 hover:border-blue-600 hover:text-blue-600;
+}
+
+.photo-filter.active {
+  @apply bg-blue-600 text-white border-blue-600;
+}
+
+/* ============================================
+   INTEGRATION WITH EXISTING SECTIONS
+   ============================================ */
+
+/* Homepage hero section photo integration */
+.hero-photo-showcase {
+  @apply absolute inset-0 z-0;
+}
+
+.hero-photo-showcase img {
+  @apply w-full h-full object-cover opacity-20;
+}
+
+/* Service section photo enhancements */
+.service-card.with-photo {
+  @apply relative overflow-hidden;
+}
+
+.service-card.with-photo .photo-background {
+  @apply absolute top-0 right-0 w-1/3 h-full opacity-10;
+}
+
+/* About section team photos */
+.team-photo-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-6 mt-8;
+}
+
+.team-photo {
+  @apply relative rounded-xl overflow-hidden group;
+}
+
+.team-photo img {
+  @apply w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110;
+}
+
+.team-info {
+  @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent;
+  @apply p-4 text-white text-center;
+}
+
+/* ============================================
+   TESTIMONIAL PHOTO INTEGRATION
+   ============================================ */
+
+/* Customer testimonial with photo */
+.testimonial-with-photo {
+  @apply relative bg-white rounded-xl shadow-lg overflow-hidden;
+}
+
+.testimonial-photo {
+  @apply w-full h-64 object-cover;
+}
+
+.testimonial-content {
+  @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent;
+  @apply flex flex-col justify-end p-6 text-white;
+}
+
+.testimonial-stars {
+  @apply flex text-yellow-400 text-lg mb-3;
+}
+
+.testimonial-quote {
+  @apply text-lg mb-4 italic;
+}
+
+.testimonial-author {
+  @apply flex items-center;
+}
+
+.testimonial-avatar {
+  @apply w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-3;
+}
+
+/* ============================================
+   PRODUCT PAGE PHOTO ENHANCEMENTS
+   ============================================ */
+
+/* Product card photo integration */
+.product-card.enhanced {
+  @apply relative overflow-hidden;
+}
+
+.product-photo {
+  @apply w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110;
+}
+
+.product-photo-placeholder {
+  @apply w-full h-48 bg-gradient-to-br from-blue-600 to-blue-800;
+  @apply flex items-center justify-center text-white text-4xl;
+}
+
+/* Product gallery thumbnails */
+.product-thumbnails {
+  @apply flex space-x-2 mt-4 overflow-x-auto pb-2;
+}
+
+.product-thumbnail {
+  @apply w-16 h-16 rounded-lg overflow-hidden cursor-pointer;
+  @apply border-2 border-transparent hover:border-blue-600;
+  @apply transition-all duration-200 flex-shrink-0;
+}
+
+.product-thumbnail.active {
+  @apply border-blue-600;
+}
+
+/* ============================================
+   LOADING STATES FOR PHOTO INTEGRATION
+   ============================================ */
+
+/* Skeleton loading for photos */
+.photo-skeleton {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden animate-pulse;
+}
+
+.photo-skeleton-image {
+  @apply h-48 bg-gray-200 relative overflow-hidden;
+}
+
+.photo-skeleton-content {
+  @apply p-4 space-y-3;
+}
+
+.photo-skeleton-title {
+  @apply h-4 bg-gray-200 rounded;
+}
+
+.photo-skeleton-text {
+  @apply h-3 bg-gray-200 rounded w-2/3;
+}
+
+/* Shimmer effect for loading */
+.photo-shimmer {
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent;
+  @apply transform -translate-x-full animate-shimmer;
+}
+
+/* ============================================
+   RESPONSIVE PHOTO LAYOUTS
+   ============================================ */
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 640px) {
+  .photo-grid-homepage {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .photo-grid-services {
+    @apply grid-cols-2 gap-3;
+  }
+
+  .photo-card {
+    @apply hover:scale-100; /* Disable scale on mobile */
+  }
+
+  .photo-content {
+    @apply translate-y-0 opacity-100; /* Always visible on mobile */
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .photo-grid-homepage {
+    @apply grid-cols-2;
+  }
+
+  .photo-grid-services {
+    @apply grid-cols-3;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .photo-overlay {
+    @apply bg-opacity-60 group-hover:bg-opacity-80;
+  }
+
+  .category-badge {
+    @apply border-2 border-white;
+  }
+
+  .photo-content {
+    @apply bg-black/80 rounded-lg;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .photo-card {
+    @apply hover:scale-100 transition-none;
+  }
+
+  .photo-overlay {
+    @apply transition-none;
+  }
+
+  .photo-content {
+    @apply transform-none transition-none;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.photo-card:focus {
+  @apply outline-none ring-4 ring-blue-600 ring-opacity-50;
+}
+
+.photo-filter:focus {
+  @apply outline-none ring-4 ring-blue-600 ring-opacity-50;
+}
+
+/* Screen reader only content */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .photo-card {
+    @apply shadow-none border border-gray-300;
+  }
+
+  .photo-overlay {
+    @apply hidden;
+  }
+
+  .photo-filter {
+    @apply hidden;
+  }
+
+  .category-badge {
+    @apply bg-white text-black border border-black;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Future Enhancement)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .photo-card {
+    @apply bg-gray-800 text-white;
+  }
+
+  .photo-skeleton {
+    @apply bg-gray-800;
+  }
+
+  .photo-skeleton-image {
+    @apply bg-gray-700;
+  }
+
+  .photo-skeleton-title,
+  .photo-skeleton-text {
+    @apply bg-gray-700;
+  }
+
+  .photo-filter {
+    @apply bg-gray-800 border-gray-600 text-white;
+  }
+
+  .photo-filter:hover {
+    @apply border-blue-400 text-blue-400;
+  }
+
+  .photo-filter.active {
+    @apply bg-blue-600 border-blue-600;
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration for smooth animations */
+.photo-card,
+.photo-overlay,
+.photo-content {
+  will-change: transform;
+}
+
+/* Optimize for repaints */
+.photo-card img {
+  @apply transform-gpu;
+}
+
+/* ============================================
+   UTILITY CLASSES FOR PHOTO INTEGRATION
+   ============================================ */
+
+/* Quick spacing utilities */
+.photo-section-spacing {
+  @apply py-16;
+}
+
+.photo-grid-spacing {
+  @apply gap-6;
+}
+
+.photo-content-spacing {
+  @apply p-4 space-y-2;
+}
+
+/* Quick color utilities for photos */
+.photo-primary-overlay {
+  @apply bg-blue-600/80;
+}
+
+.photo-success-overlay {
+  @apply bg-green-600/80;
+}
+
+.photo-warning-overlay {
+  @apply bg-yellow-500/80;
+}
+
+.photo-danger-overlay {
+  @apply bg-red-600/80;
+}
+
+/* Animation utilities */
+.photo-animate-in {
+  @apply animate-fade-in;
+}
+
+.photo-animate-up {
+  @apply animate-slide-up;
+}
+
+.photo-animate-scale {
+  @apply animate-zoom-in;
+}
+
+/* ============================================
+   CUSTOM PROPERTIES FOR EASY THEMING
+   ============================================ */
+
+:root {
+  --photo-border-radius: 0.75rem;
+  --photo-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --photo-shadow-hover: 0 25px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --photo-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --photo-scale-hover: 1.05;
+  --photo-opacity-overlay: 0.4;
+}
+
+/* Apply custom properties */
+.photo-card {
+  border-radius: var(--photo-border-radius);
+  box-shadow: var(--photo-shadow);
+  transition: var(--photo-transition);
+}
+
+.photo-card:hover {
+  box-shadow: var(--photo-shadow-hover);
+  transform: scale(var(--photo-scale-hover));
+}
+
+.photo-overlay {
+  transition: var(--photo-transition);
+}
+
+.photo-overlay:hover {
+  background-color: rgba(0, 0, 0, var(--photo-opacity-overlay));
+}

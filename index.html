@@ -56,7 +56,7 @@
                     </nav>
                     <div class="flex items-center space-x-3 bg-battery-light px-6 py-3 rounded-xl border-2 border-gray-200 shadow-sm">
                         <i class="fas fa-phone text-battery-blue text-lg"></i>
-                        <span class="font-bold text-battery-blue text-lg">0439 222 665</span>
+                        <span class="font-bold text-battery-blue text-lg">1300 088 552</span>
                     </div>
                     <button class="bg-battery-yellow text-black px-8 py-4 rounded-xl border-3 border-battery-yellow font-bold text-lg hover:bg-white hover:text-battery-yellow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                         Free Quote
@@ -65,13 +65,67 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
-                    <button class="text-battery-gray hover:text-battery-blue p-3 rounded-lg hover:bg-battery-light transition-all duration-200">
+                    <button id="mobile-menu-btn" class="text-battery-gray hover:text-battery-blue p-3 rounded-lg hover:bg-battery-light transition-all duration-200">
                         <i class="fas fa-bars text-3xl"></i>
                     </button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Menu Panel -->
+        <div class="fixed right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="mobile-menu-panel">
+            <div class="p-6">
+                <!-- Close button -->
+                <button id="mobile-menu-close" class="absolute top-6 right-6 text-battery-gray hover:text-battery-blue">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="mb-8">
+                    <img src="photos/batteries_plus_logo_website.jpg"
+                         alt="Batteries Plus Logo"
+                         class="h-12 w-auto object-contain">
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="flex flex-col space-y-4">
+                    <a href="services.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold py-3 px-4 border-l-4 border-transparent hover:border-battery-blue hover:bg-battery-light transition-all duration-300">Services</a>
+                    <a href="about.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold py-3 px-4 border-l-4 border-transparent hover:border-battery-blue hover:bg-battery-light transition-all duration-300">About</a>
+                    <a href="contact.html" class="text-lg text-battery-gray hover:text-battery-blue font-semibold py-3 px-4 border-l-4 border-transparent hover:border-battery-blue hover:bg-battery-light transition-all duration-300">Contact</a>
+                </nav>
+
+                <!-- Contact Info -->
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <div class="flex items-center space-x-3 bg-battery-light px-4 py-3 rounded-lg mb-4">
+                        <i class="fas fa-phone text-battery-blue text-lg"></i>
+                        <span class="font-bold text-battery-blue text-lg">1300 088 552</span>
+                    </div>
+                    <button class="w-full bg-battery-yellow text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all duration-300">
+                        Get Free Quote
+                    </button>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="#" class="text-battery-gray hover:text-battery-blue">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-battery-gray hover:text-battery-blue">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-battery-gray hover:text-battery-blue">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="bg-battery-blue text-white py-32">
@@ -101,7 +155,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
                             <div class="flex items-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
                                 <i class="fas fa-clock text-2xl text-battery-yellow"></i>
-                                <span class="font-semibold text-lg">24/7 Service</span>
+                                <span class="font-semibold text-lg">8AM-5PM Service</span>
                             </div>
                             <div class="flex items-center space-x-3 bg-blue-800 bg-opacity-50 p-4 rounded-xl">
                                 <i class="fas fa-shield-alt text-2xl text-battery-yellow"></i>
@@ -194,7 +248,7 @@
                     </p>
                     <ul class="text-left text-battery-gray space-y-4 mb-8">
                         <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>High reliability</li>
-                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>24/7 priority service</li>
+                        <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Priority service 8AM-5PM</li>
                         <li class="flex items-center text-lg"><i class="fas fa-check text-battery-yellow mr-4 text-xl"></i>Emergency response</li>
                     </ul>
                     <button class="w-full bg-battery-red text-white py-4 rounded-xl border-3 border-battery-red font-bold text-lg hover:bg-white hover:text-battery-red hover:shadow-lg transform hover:scale-105 transition-all duration-300">
@@ -384,7 +438,7 @@
                         <div class="text-white font-semibold text-lg">Customer Satisfaction</div>
                     </div>
                     <div class="group">
-                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                        <div class="text-5xl font-bold text-battery-yellow mb-3 group-hover:scale-110 transition-transform duration-300">8-5</div>
                         <div class="text-white font-semibold text-lg">Emergency Service</div>
                     </div>
                     <div class="group">
@@ -611,12 +665,12 @@
                     Emergency Battery Service
                 </h3>
                 <p class="text-2xl mb-12 leading-relaxed text-gray-100">
-                    Dead battery? Don't get stranded! Our emergency response team is ready 24/7 across NSW.
+                    Dead battery? Don't get stranded! Our response team is available 8AM-5PM across NSW. After hours can be sorted.
                     Fast, professional service when you need it most.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-8 justify-center">
-                    <a href="tel:0439222665" class="bg-white text-battery-red px-12 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
-                        <i class="fas fa-phone mr-3 text-2xl"></i>Call Now: 0439 222 665
+                    <a href="tel:1300088552" class="bg-white text-battery-red px-12 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-phone mr-3 text-2xl"></i>Call Now: 1300 088 552
                     </a>
                     <button class="bg-battery-yellow text-gray-900 px-12 py-5 rounded-2xl text-xl font-bold hover:bg-yellow-300 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                         <i class="fas fa-map-marker-alt mr-3 text-2xl"></i>Find Nearest Location
@@ -711,7 +765,7 @@
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
                             <i class="fas fa-phone text-battery-yellow text-xl"></i>
-                            <span class="text-lg">0439 222 665</span>
+                            <span class="text-lg">1300 088 552</span>
                         </div>
                         <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
                             <i class="fas fa-envelope text-battery-yellow text-xl"></i>
@@ -723,7 +777,7 @@
                         </div>
                         <div class="flex items-center space-x-4 bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300">
                             <i class="fas fa-clock text-battery-yellow text-xl"></i>
-                            <span class="text-lg">24/7 Emergency Service</span>
+                            <span class="text-lg">8AM-5PM Service<br>After hours available</span>
                         </div>
                     </div>
                 </div>
@@ -766,8 +820,53 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Simple mobile menu toggle
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+            // Function to open mobile menu
+            function openMobileMenu() {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                // Trigger animation
+                setTimeout(() => {
+                    mobileMenuPanel.classList.remove('translate-x-full');
+                }, 10);
+            }
+
+            // Function to close mobile menu
+            function closeMobileMenu() {
+                mobileMenuPanel.classList.add('translate-x-full');
+                // Wait for animation to complete
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+
+            // Event listeners
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', openMobileMenu);
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Close menu when clicking on a link
+            const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+            mobileMenuLinks?.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
             // Close lightbox on background click
             document.getElementById('lightbox').addEventListener('click', function(e) {
                 if (e.target === this) {

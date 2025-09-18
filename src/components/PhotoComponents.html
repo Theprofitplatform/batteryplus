@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Components Library - Batteries Plus NSW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'battery-blue': '#1e40af',
+                        'battery-green': '#059669',
+                        'battery-yellow': '#f59e0b',
+                        'battery-red': '#dc2626',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'bounce-subtle': 'bounceSubtle 0.6s ease-out',
+                        'pulse-soft': 'pulseSoft 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s infinite linear',
+                        'zoom-in': 'zoomIn 0.2s ease-out',
+                        'flip': 'flip 0.6s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        bounceSubtle: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-5px)' },
+                            '60%': { transform: 'translateY(-2px)' }
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        },
+                        zoomIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        flip: {
+                            '0%': { transform: 'rotateY(0)' },
+                            '50%': { transform: 'rotateY(90deg)' },
+                            '100%': { transform: 'rotateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-8 mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-gray-900 text-center mb-4">Photo Components Library</h1>
+            <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto">Interactive photo components with micro-interactions for the Batteries Plus NSW website</p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+        <!-- 1. Photo Cards with Hover Effects -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Photo Cards with Hover Effects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Tilt Card -->
+                <div class="photo-card-tilt bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer">
+                    <div class="relative group">
+                        <img src="https://via.placeholder.com/400x300/1e40af/ffffff?text=Car+Battery+Install"
+                             alt="Car battery installation"
+                             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                            <h3 class="font-bold text-lg">Professional Installation</h3>
+                            <p class="text-sm text-gray-200">Expert technician service</p>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-battery-blue text-white px-3 py-1 rounded-full text-xs font-medium animate-pulse-soft">
+                                <i class="fas fa-tools mr-1"></i>Installation
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flip Card -->
+                <div class="photo-card-flip w-full h-64 perspective-1000">
+                    <div class="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+                        <!-- Front -->
+                        <div class="flip-card-front absolute inset-0 w-full h-full bg-white rounded-xl shadow-lg overflow-hidden backface-hidden">
+                            <img src="https://via.placeholder.com/400x300/059669/ffffff?text=Modern+Workshop"
+                                 alt="Modern workshop facility"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <h3 class="font-bold text-lg">Modern Facilities</h3>
+                                <p class="text-sm">Hover to see details</p>
+                            </div>
+                        </div>
+                        <!-- Back -->
+                        <div class="flip-card-back absolute inset-0 w-full h-full bg-battery-green rounded-xl shadow-lg p-6 text-white transform rotate-y-180 backface-hidden flex flex-col justify-center">
+                            <i class="fas fa-building text-4xl mb-4 text-center"></i>
+                            <h3 class="text-xl font-bold mb-2 text-center">State-of-the-Art Workshop</h3>
+                            <p class="text-center text-green-100">Equipped with latest battery testing and diagnostic equipment for all vehicle types.</p>
+                            <button class="mt-4 bg-white text-battery-green px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Card -->
+                <div class="photo-card-float bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer animate-float">
+                    <div class="relative group">
+                        <img src="https://via.placeholder.com/400x300/dc2626/ffffff?text=Emergency+Service"
+                             alt="Emergency vehicle service"
+                             class="w-full h-48 object-cover transition-all duration-300 group-hover:brightness-110">
+                        <div class="absolute inset-0 bg-red-500 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-3 h-3 bg-battery-red rounded-full animate-pulse"></div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-battery-red text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg">
+                                <i class="fas fa-bolt mr-1"></i>After Hours Available
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. Interactive Photo Grid -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Interactive Photo Grid</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="interactive-grid">
+
+                <div class="grid-item relative overflow-hidden rounded-lg cursor-pointer group" data-category="automotive">
+                    <img src="https://via.placeholder.com/200x200/1e40af/ffffff?text=Car"
+                         alt="Car battery"
+                         class="w-full h-32 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-expand text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2">
+                        <span class="bg-battery-blue text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Car Batteries
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid-item relative overflow-hidden rounded-lg cursor-pointer group" data-category="commercial">
+                    <img src="https://via.placeholder.com/200x200/f59e0b/ffffff?text=Truck"
+                         alt="Truck battery"
+                         class="w-full h-32 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-expand text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2">
+                        <span class="bg-battery-yellow text-gray-900 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Truck Batteries
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid-item relative overflow-hidden rounded-lg cursor-pointer group" data-category="marine">
+                    <img src="https://via.placeholder.com/200x200/059669/ffffff?text=Marine"
+                         alt="Marine battery"
+                         class="w-full h-32 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-expand text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2">
+                        <span class="bg-battery-green text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Marine Batteries
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid-item relative overflow-hidden rounded-lg cursor-pointer group" data-category="emergency">
+                    <img src="https://via.placeholder.com/200x200/dc2626/ffffff?text=Emergency"
+                         alt="Emergency vehicle battery"
+                         class="w-full h-32 object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-expand text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 right-2">
+                        <span class="bg-battery-red text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Emergency
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Loading States and Placeholders -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Loading States & Placeholders</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Shimmer Loading -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent transform -translate-x-full animate-shimmer"></div>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="h-4 bg-gray-200 rounded animate-pulse"></div>
+                        <div class="h-3 bg-gray-200 rounded w-2/3 animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- Pulse Loading -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-pulse">
+                    <div class="h-48 bg-gray-300"></div>
+                    <div class="p-4 space-y-3">
+                        <div class="h-4 bg-gray-300 rounded"></div>
+                        <div class="h-3 bg-gray-300 rounded w-2/3"></div>
+                    </div>
+                </div>
+
+                <!-- Progressive Loading -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gray-200 relative flex items-center justify-center">
+                        <div class="w-12 h-12 border-4 border-battery-blue border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-battery-blue rounded-full animate-bounce"></div>
+                            <div class="w-2 h-2 bg-battery-blue rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                            <div class="w-2 h-2 bg-battery-blue rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                            <span class="text-sm text-gray-600 ml-2">Loading image...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Photo Testimonials with Overlays -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Photo Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Testimonial Card 1 -->
+                <div class="relative bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <img src="https://via.placeholder.com/500x300/f59e0b/ffffff?text=Happy+Customer"
+                         alt="Satisfied customer"
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-battery-yellow text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg mb-3 italic">"Excellent service! They replaced my car battery in 15 minutes."</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-battery-yellow rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-user text-gray-900"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sarah M.</p>
+                                <p class="text-sm text-gray-300">Sydney, NSW</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-quote-left mr-1"></i>Testimonial
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="relative bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <img src="https://via.placeholder.com/500x300/059669/ffffff?text=Fleet+Manager"
+                         alt="Fleet manager testimonial"
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-battery-yellow text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg mb-3 italic">"Reliable service for our entire fleet of emergency vehicles."</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-battery-green rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-user-tie text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Michael K.</p>
+                                <p class="text-sm text-gray-300">Fleet Manager, NSW Ambulance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-quote-left mr-1"></i>Testimonial
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Before/After Comparison Slider -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Before/After Comparison</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Battery Installation Transformation</h3>
+                <div class="comparison-slider relative max-w-2xl mx-auto">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <!-- Before Image -->
+                        <img src="https://via.placeholder.com/600x400/dc2626/ffffff?text=Old+Battery"
+                             alt="Old battery before replacement"
+                             class="w-full h-64 object-cover">
+
+                        <!-- After Image -->
+                        <div class="absolute top-0 left-0 h-full overflow-hidden rounded-lg transition-all duration-300"
+                             id="after-image" style="width: 50%;">
+                            <img src="https://via.placeholder.com/600x400/059669/ffffff?text=New+Battery"
+                                 alt="New battery after installation"
+                                 class="w-full h-64 object-cover">
+                        </div>
+
+                        <!-- Slider Handle -->
+                        <div class="absolute top-0 h-full flex items-center cursor-col-resize"
+                             id="slider-handle" style="left: 50%; transform: translateX(-50%);">
+                            <div class="w-6 h-6 bg-white border-2 border-battery-blue rounded-full shadow-lg flex items-center justify-center">
+                                <div class="w-2 h-2 bg-battery-blue rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Labels -->
+                        <div class="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg text-sm">
+                            Before
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-lg text-sm">
+                            After
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4">Drag the slider to see the transformation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Interactive Photo Tooltip -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Interactive Photo with Hotspots</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="relative max-w-2xl mx-auto">
+                    <img src="https://via.placeholder.com/600x400/1e40af/ffffff?text=Workshop+Layout"
+                         alt="Workshop layout with interactive hotspots"
+                         class="w-full h-64 object-cover rounded-lg">
+
+                    <!-- Hotspot 1 -->
+                    <div class="hotspot absolute top-8 left-8 cursor-pointer group">
+                        <div class="w-6 h-6 bg-battery-blue rounded-full animate-pulse-soft border-4 border-white shadow-lg"></div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                            Battery Testing Station
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 2 -->
+                    <div class="hotspot absolute top-16 right-12 cursor-pointer group">
+                        <div class="w-6 h-6 bg-battery-green rounded-full animate-pulse-soft border-4 border-white shadow-lg"></div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                            Installation Bay
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 3 -->
+                    <div class="hotspot absolute bottom-8 left-16 cursor-pointer group">
+                        <div class="w-6 h-6 bg-battery-yellow rounded-full animate-pulse-soft border-4 border-white shadow-lg"></div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                            Recycling Center
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Accessibility Features Demo -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Accessibility-Focused Photo Components</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- High Contrast Mode -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">High Contrast Mode</h3>
+                        <button onclick="toggleHighContrast()"
+                                class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-battery-blue">
+                            Toggle
+                        </button>
+                    </div>
+                    <div class="photo-container" id="high-contrast-demo">
+                        <img src="https://via.placeholder.com/300x200/1e40af/ffffff?text=Accessible+Photo"
+                             alt="Professional battery installation with clear visual indicators"
+                             class="w-full h-32 object-cover rounded-lg">
+                        <p class="mt-2 text-sm text-gray-600">Professional battery installation service</p>
+                    </div>
+                </div>
+
+                <!-- Focus Indicators -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Enhanced Focus Indicators</h3>
+                    <div class="space-y-3">
+                        <button class="w-full p-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-left transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-battery-blue focus:ring-opacity-50 focus:bg-blue-50">
+                            <i class="fas fa-car mr-2 text-battery-blue"></i>
+                            Car Battery Services (Tab to focus)
+                        </button>
+                        <button class="w-full p-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-left transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-battery-blue focus:ring-opacity-50 focus:bg-blue-50">
+                            <i class="fas fa-truck mr-2 text-battery-blue"></i>
+                            Commercial Battery Services
+                        </button>
+                        <button class="w-full p-3 bg-gray-100 hover:bg-gray-200 rounded-lg text-left transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-battery-blue focus:ring-opacity-50 focus:bg-blue-50">
+                            <i class="fas fa-ambulance mr-2 text-battery-blue"></i>
+                            Emergency Vehicle Services
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Interactive Components -->
+    <script>
+        // Before/After Comparison Slider
+        function initComparisonSlider() {
+            const slider = document.getElementById('slider-handle');
+            const afterImage = document.getElementById('after-image');
+            const container = slider.parentElement;
+            let isDragging = false;
+
+            slider.addEventListener('mousedown', () => isDragging = true);
+            document.addEventListener('mouseup', () => isDragging = false);
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percentage = (x / rect.width) * 100;
+
+                const clampedPercentage = Math.max(0, Math.min(100, percentage));
+
+                slider.style.left = clampedPercentage + '%';
+                afterImage.style.width = clampedPercentage + '%';
+            });
+
+            // Touch support for mobile
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchend', () => isDragging = false);
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+
+                const rect = container.getBoundingClientRect();
+                const x = e.touches[0].clientX - rect.left;
+                const percentage = (x / rect.width) * 100;
+
+                const clampedPercentage = Math.max(0, Math.min(100, percentage));
+
+                slider.style.left = clampedPercentage + '%';
+                afterImage.style.width = clampedPercentage + '%';
+
+                e.preventDefault();
+            });
+        }
+
+        // Tilt Effect for Cards
+        function initTiltEffect() {
+            const tiltCards = document.querySelectorAll('.photo-card-tilt');
+
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                });
+            });
+        }
+
+        // Interactive Grid
+        function initInteractiveGrid() {
+            const gridItems = document.querySelectorAll('.grid-item');
+
+            gridItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const category = item.getAttribute('data-category');
+                    showToast(`Clicked on ${category} category`);
+
+                    // Add bounce animation
+                    item.classList.add('animate-bounce-subtle');
+                    setTimeout(() => {
+                        item.classList.remove('animate-bounce-subtle');
+                    }, 600);
+                });
+            });
+        }
+
+        // High Contrast Mode
+        function toggleHighContrast() {
+            const demo = document.getElementById('high-contrast-demo');
+            demo.classList.toggle('high-contrast-mode');
+        }
+
+        // Toast Notifications
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-4 right-4 bg-battery-blue text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-slide-up';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('animate-fade-in');
+                document.body.removeChild(toast);
+            }, 3000);
+        }
+
+        // Initialize all interactive components
+        document.addEventListener('DOMContentLoaded', function() {
+            initComparisonSlider();
+            initTiltEffect();
+            initInteractiveGrid();
+        });
+
+    </script>
+
+    <!-- Custom Styles for 3D Effects -->
+    <style>
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-inner:hover {
+            transform: rotateY(180deg);
+        }
+
+        /* High Contrast Mode */
+        .high-contrast-mode {
+            filter: contrast(150%) brightness(120%);
+        }
+
+        .high-contrast-mode img {
+            filter: contrast(200%) brightness(150%);
+        }
+
+        /* Enhanced focus styles for accessibility */
+        .focus\:ring-4:focus {
+            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.5);
+        }
+
+        /* Smooth transitions for all interactive elements */
+        .photo-card-tilt {
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flip-card-inner {
+                height: 200px;
+            }
+
+            .comparison-slider {
+                margin: 0 auto;
+            }
+
+            .hotspot {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-shimmer,
+            .animate-pulse,
+            .animate-bounce,
+            .animate-float {
+                animation: none;
+            }
+
+            .photo-card-tilt {
+                transform: none !important;
+            }
+
+            .flip-card-inner:hover {
+                transform: none;
+            }
+        }
+    </style>
+
+</body>
+</html>
